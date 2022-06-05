@@ -1,12 +1,6 @@
 import React from "react";
 import Footer from "../Footers/Footer";
-import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
-import dashboard from "../assets/dashboard.svg";
-import tasksDim from "../assets/tasks-dim.svg";
-import customizeDim from "../assets/customize-dim.svg";
-import communityDim from "../assets/community-dim.svg";
-import guidelinesDim from "../assets/guidelinesDim.svg";
 import DashboardHeader from "../Headers/DashboardHeader";
 import nft from "../assets/nft.svg";
 import star from "../assets/star.svg";
@@ -18,6 +12,8 @@ import wikipedia from "../assets/wikipedia.svg";
 import udemy from "../assets/udemy.svg";
 import codeforces from "../assets/codeforces.svg";
 import leaderboardYellow from "../assets/leaderboardYellow.svg";
+import time from "../assets/time.svg";
+import LeftNav from "../Headers/LeftNav";
 
 const Dashboard = () => {
   const listSkills = () => {
@@ -158,88 +154,117 @@ const Dashboard = () => {
     });
   };
 
+  const listTimeSpent = () => {
+    let skills = [
+      {
+        name: "Design",
+        color: "#EF972D",
+      },
+      {
+        name: "Crypto",
+        color: "#EED581",
+      },
+      {
+        name: "Blockchain",
+        color: "#263238",
+      },
+      {
+        name: "AI",
+        color: "#AFE3F3",
+      },
+      {
+        name: "Marketing",
+        color: "#FFFFFF",
+      },
+    ];
+
+    return skills.map((item) => {
+      return (
+        <div className="flex my-2">
+          <div className="my-auto">
+            <svg
+              width="14"
+              height="15"
+              viewBox="0 0 14 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                y="0.257507"
+                width="14"
+                height="14"
+                rx="7"
+                fill={item.color}
+              />
+            </svg>
+          </div>
+          <h1 className="align-super text-xl px-4 text-secondary-white">
+            {item.name}
+          </h1>
+        </div>
+      );
+    });
+  };
+
+  const listSubmittedTasks = () => {
+    let obj = [
+      {
+        name: "Design Animation Graphics",
+        organiser: "DeFi DAO",
+        status: "Accepted",
+        submittedOn: "1 June 2022",
+      },
+      {
+        name: "Windows Development",
+        organiser: "SuperTeam DAO",
+        status: "Submitted",
+        submittedOn: "30 May 2022",
+      },
+      {
+        name: "Web 3 Token Developer",
+        organiser: "Token DAO",
+        status: "Submitted",
+        submittedOn: "25  May 2022",
+      },
+      {
+        name: "Video Editing",
+        organiser: "Creatives DAO",
+        status: "Accepted",
+        submittedOn: "14 May 2022",
+      },
+    ];
+
+    return obj.map((item) => {
+      return (
+        <div className="bg-custom-black px-12 py-6 rounded-3xl text-xl">
+          <h1 className="font-bold my-2">{item.name}</h1>
+          <h1 className="text-secondary-white">{item.organiser}</h1>
+          <div className="flex justify-between text-secondary-white mt-6">
+            <h1 className="">Submitted On</h1>
+            <h1 className="px-2">Status</h1>
+          </div>
+          <div className="flex justify-between my-2">
+            <h1 className="">{item.submittedOn}</h1>
+            <h1
+              className={`bg-secondary-black px-4 py-2 ${
+                item.status == "Submitted" ? "text-red-text" : "text-green-text"
+              }`}
+            >
+              {item.status}
+            </h1>
+          </div>
+        </div>
+      );
+    });
+  };
+
   return (
     <>
       <div className="grid grid-cols-6 text-white font-Montserrat">
         <div className="col-span-1 bg-primary-black">
-          <span className="font-mulish text-3xl font-bold mx-16  ">
-            <Link to="/#">
-              <div className="flex justify-center">
-                <img src={logo} className="mx-[10px]" />
-                <h1>Carbonite</h1>
-              </div>
-            </Link>
-          </span>
-          <div className="ml-8 my-16 text-secondary-white">
-            <button
-              className="flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl bg-secondary-black my-4"
-              style={{
-                borderStyle: "outset",
-              }}
-            >
-              <img src={dashboard} className="mx-2 my-auto align-sub" />
-              <span className="align-super ml-2 text-white"> Dashboard </span>
-            </button>
-            <button
-              className="flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl  my-4"
-              style={{
-                borderStyle: "outset",
-              }}
-            >
-              <img
-                src={tasksDim}
-                className="mx-2 my-auto align-sub text-left"
-              />
-              <span className="align-super"> Tasks </span>
-            </button>
-            <button
-              className="flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl  my-4"
-              style={{
-                borderStyle: "outset",
-              }}
-            >
-              <img
-                src={customizeDim}
-                className="mx-2 my-auto align-sub text-left"
-              />
-              <span className="align-super"> Customize </span>
-            </button>
-            <button
-              className="flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl  my-4"
-              style={{
-                borderStyle: "outset",
-              }}
-            >
-              <img
-                src={communityDim}
-                className="mx-2 my-auto align-sub text-left"
-              />
-              <span className="align-super"> Community</span>
-            </button>
-            <button
-              className="flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl  my-4"
-              style={{
-                borderStyle: "outset",
-              }}
-            >
-              <img
-                src={guidelinesDim}
-                className="mx-2 my-auto align-sub text-left"
-              />
-              <span className="align-super"> Guidelines</span>
-            </button>
-          </div>
-
-          <button
-            className="flex px-8 py-4 rounded-3xl font-bold text-xl shadow-xl shadow-secondary-black my-48 mx-auto "
-            style={{
-              borderStyle: "outset",
-            }}
-          >
-            <span className="align-super ml-2 "> Sign Out</span>
-          </button>
+          <LeftNav />
         </div>
-        <div className="col-span-5">
+        <div className="col-span-5 bg-primary-black">
           <DashboardHeader />
 
           <div className="h-12 bg-primary-black"></div>
@@ -261,7 +286,7 @@ const Dashboard = () => {
                     Rank : <span className="text-custom-yellow">270</span>
                   </h1>
                 </div>
-                <div className="inline-block mt-4">
+                <div className="inline-block mt-8">
                   <img src={star} className="inline-block pr-2 w-10 h-10" />
                   <h1 className="font-bold inline-block text-xl align-sub">
                     Your Top Skills
@@ -270,7 +295,7 @@ const Dashboard = () => {
 
                 {listSkills()}
 
-                <div className="inline-block">
+                <div className="inline-block mt-8">
                   <img
                     src={overallgrowth}
                     className="inline-block pr-2 w-10 h-10"
@@ -283,7 +308,7 @@ const Dashboard = () => {
                 {listOverallPerformace()}
 
                 <button
-                  className="flex px-8 py-4 rounded-3xl font-bold text-xl shadow-xl shadow-secondary-black my-8 mx-auto "
+                  className="flex px-8 py-4 rounded-3xl font-bold text-xl shadow-xl shadow-secondary-black mt-20 mb-8 mx-auto "
                   style={{
                     borderStyle: "outset",
                   }}
@@ -293,7 +318,7 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="col-span-3 ">
-              <div className="text-xl flex mb-8 mt-4">
+              <div className="text-xl flex mb-4 mt-4">
                 <img src={greenProgress} className="w-6 h-6" />
                 <h1 className="ml-4">
                   You were <span className="text-[#4BB543]"> 14% </span> more
@@ -308,7 +333,6 @@ const Dashboard = () => {
                   </div>
                   <div className="flex mx-12">{listVisitedWebsites()}</div>
                 </div>
-                {/* <div className="border-2 bg-custom-black rounded-3xl">03</div> */}
                 <div className="grid grid-cols-2 row-span-3 gap-8 justify-between">
                   <div className="bg-custom-black col-span-1 rounded-3xl ">
                     <img
@@ -331,12 +355,59 @@ const Dashboard = () => {
                     {listLeaderBoard()}
                   </div>
                 </div>
-                <div className="border-2 row-span-5">04</div>
+                <div className=" bg-custom-black row-span-5 rounded-3xl">
+                  <div className="text-xl flex pt-12 pb-6 px-20">
+                    <img src={time} className="w-6 h-6" />
+                    <h1 className="ml-4 align-super">Time spent on skills</h1>
+                  </div>
+                  <div className="flex mx-12 justify-between">
+                    <div className="mx-8">{listTimeSpent()}</div>
+                    <div>Img</div>
+                  </div>
+                  <div className="flex justify-center">
+                    <button
+                      className=" px-8 py-4 rounded-3xl font-bold text-xl my-8  bg-secondary-black"
+                      style={{
+                        borderStyle: "outset",
+                      }}
+                    >
+                      <span className="align-super ml-2 "> Daily</span>
+                    </button>
+                    <button
+                      className=" px-8 py-4 rounded-3xl font-bold text-xl my-8 "
+                      style={{
+                        borderStyle: "outset",
+                      }}
+                    >
+                      <span className="align-super ml-2 text-secondary-white">
+                        Weekly
+                      </span>
+                    </button>
+                    <button
+                      className=" px-8 py-4 rounded-3xl font-bold text-xl my-8 "
+                      style={{
+                        borderStyle: "outset",
+                      }}
+                    >
+                      <span className="align-super ml-2 text-secondary-white">
+                        Monthly
+                      </span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <h1 className="mx-16 text-3xl font-bold mt-16 mb-8">
+            Submitted Tasks
+          </h1>
+          <div className="grid grid-cols-2 gap-8 mx-16">
+            {listSubmittedTasks()}
+          </div>
+          <div className="h-20"></div>
         </div>
       </div>
+
       <Footer />
     </>
   );
