@@ -63,7 +63,7 @@ const Rewards = () => {
         <h1 className="">
           40 <span className="text-custom-yellow">XP</span>{" "}
         </h1>
-        <div className="flex justify-center mb-[19.3rem]">
+        <div className="flex justify-center">
           <button
             className="flex px-12 py-2 bg-secondary-black rounded-3xl font-bold shadow-xl "
             style={{
