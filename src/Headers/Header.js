@@ -4,7 +4,7 @@ import logo from "../assets/logo.svg";
 
 const Header = () => {
   return (
-    <nav className=" flex items-center justify-between px-6 py-4 bg-black ">
+    <nav className="absolute w-screen flex items-center justify-between px-6 py-4 bg-black ">
       <span className="font-mulish text-2xl font-bold mx-16 text-white ">
         <Link to="/#">
           <div className="flex justify-center">

@@ -17,58 +17,66 @@ const Landing = () => {
   return (
     <>
       <Header />
-      <div className="bg-black text-white font-Montserrat py-[19.3rem]">
-        <h1
-          className="text-[5rem] font-bold text-center"
-          style={{
-            lineHeight: "6rem",
-          }}
-        >
-          Be Productive <br /> Earn Rewards.
-        </h1>
-
-        <p className="text-2xl text-center my-8">
-          Get rewards for being consistent and productive
-        </p>
-        <div className="flex justify-center mb-[19.3rem]">
-          <button
-            className="bg-custom-yellow text-black px-12 py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
-            style={{
-              borderStyle: "outset",
-            }}
-          >
-            Join Waitlist
-          </button>
-          <button
-            className="flex px-12 py-2 rounded-3xl font-bold shadow-xl "
-            style={{
-              borderStyle: "outset",
-            }}
-          >
-            <img src={discord} className="px-2" /> Discord
-          </button>
-        </div>
-
-        <div className="grid grid-cols-2 py-[19.3rem]">
-          <div className="w-[70%] mx-auto mt-16">
+      <div className="bg-black text-white font-Montserrat snap-y snap-mandatory overflow-scroll">
+        <section class="flex h-screen justify-center items-center snap-start">
+          <div class="">
             <h1
-              className="text-[4.5rem] font-bold"
+              className="text-[5rem] font-bold text-center"
               style={{
                 lineHeight: "6rem",
               }}
             >
-              Build Your <br />{" "}
-              <span className="text-custom-yellow">Web3 </span> Resume.
+              Be Productive <br /> Earn Rewards.
             </h1>
-            <p className="text-2xl my-8">
-              Your proof of work on blockchain. Secure way to show your work to
-              the world & get monetised.
+            <p className="text-2xl text-center my-8">
+              Get rewards for being consistent and productive
             </p>
+            <div className="flex justify-center ">
+              <button
+                className="bg-custom-yellow text-black px-12 py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
+                style={{
+                  borderStyle: "outset",
+                }}
+              >
+                Join Waitlist
+              </button>
+              <button
+                className="flex px-12 py-2 rounded-3xl font-bold shadow-xl "
+                style={{
+                  borderStyle: "outset",
+                }}
+              >
+                <img src={discord} className="px-2" /> Discord
+              </button>
+            </div>
           </div>
-          <div>
-            <img className="mx-auto" src={blockchain} />
+        </section>
+        {/* border-2 border-white */}
+        <section class="flex h-screen  items-center snap-start">
+          {" "}
+          <div className="grid grid-cols-2">
+            <div className="w-[70%] mx-auto mt-16">
+              <h1
+                className="text-[4.5rem] font-bold"
+                style={{
+                  lineHeight: "6rem",
+                }}
+              >
+                Build Your <br />{" "}
+                <span className="text-custom-yellow">Web3 </span> Resume.
+              </h1>
+              <p className="text-2xl my-8">
+                Your proof of work on blockchain. Secure way to show your work
+                to the world & get monetised.
+              </p>
+            </div>
+            <div>
+              <img className="mx-auto" src={blockchain} />
+            </div>
           </div>
-        </div>
+        </section>
+
+        <section></section>
         <div className="grid grid-cols-2 ">
           <div className="">
             <img className="mx-auto py-[19.3rem]" src={work} />
