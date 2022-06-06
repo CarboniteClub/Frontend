@@ -17,14 +17,14 @@ const Landing = () => {
   return (
     <>
       <Header />
-      <div className="snap-y snap-mandatory h-screen overflow-scroll bg-black text-white font-Montserrat w-screen">
+      <div className="snap-y snap-mandatory h-screen overflow-scroll bg-black text-white font-Montserrat w-screen duration-300">
         {/* <div class="relative top-8 -left-4 w-96 h-96 bg-yellow-300 rounded-full blur-xl opacity-30 animate-pulse z-50"></div> */}
-        <section class="flex h-screen justify-center items-center snap-start">
-          <div class="">
-            <div class="relative w-full max-w-lg">
-              <div class="absolute rounded-full animate-ping mix-blend-lighten filter blur-2xl opacity-70 -top-5 -right-2 w-72 h-72 bg-yellow-500" />
-              <div class="absolute rounded-full animate-pulse animation-delay-2000 mix-blend-lighten filter blur-2xl opacity-70 top-0 -left-2 w-72 h-72 bg-indigo-500" />
-              <div class="absolute rounded-full animate-bounce  mix-blend-lighten filter blur-2xl opacity-70 -bottom-20 left-20 w-72 h-72 bg-pink-500" />
+        <section className="flex h-screen justify-center items-center snap-start">
+          <div className="">
+            <div className="relative w-full max-w-lg">
+              <div className="absolute rounded-full animate-ping mix-blend-lighten filter blur-2xl opacity-70 -top-5 -right-2 w-72 h-72 bg-yellow-500" />
+              <div className="absolute rounded-full animate-pulse animation-delay-2000 mix-blend-lighten filter blur-2xl opacity-70 top-0 -left-2 w-72 h-72 bg-indigo-500" />
+              <div className="absolute rounded-full animate-bounce  mix-blend-lighten filter blur-2xl opacity-70 -bottom-20 left-20 w-72 h-72 bg-pink-500" />
             </div>
             <h1 className="text-6xl md:text-[5rem] font-bold text-center leading-[4rem] md:leading-[6rem]">
               Be Productive <br /> Earn Rewards.
@@ -66,7 +66,7 @@ const Landing = () => {
           </div>
         </section>
         {/* border-2 border-white */}
-        <section class="flex h-screen  items-center snap-start">
+        <section className="flex h-screen  items-center snap-start">
           {" "}
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="w-[70%] mx-auto mt-16">
@@ -90,7 +90,7 @@ const Landing = () => {
           </div>
         </section>
         {/* the group of 4 starts  */}
-        {/* <section class=" snap-mandatory h-screen"> */}{" "}
+        {/* <section className=" snap-mandatory h-screen"> */}{" "}
         <div className=" md:h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
           <div className="">
             <img className="mx-auto" src={work} />
