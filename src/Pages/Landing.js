@@ -17,7 +17,7 @@ const Landing = () => {
   return (
     <>
       <Header />
-      <div className="bg-black text-white font-Montserrat snap-y snap-mandatory overflow-scroll">
+      <div className="snap-y snap-mandatory h-screen overflow-scroll bg-black text-white font-Montserrat w-screen">
         <section class="flex h-screen justify-center items-center snap-start">
           <div class="">
             <h1
@@ -75,37 +75,38 @@ const Landing = () => {
             </div>
           </div>
         </section>
-
-        <section></section>
-        <div className="grid grid-cols-2 ">
+        {/* the group of 4 starts  */}
+        {/* <section class=" snap-mandatory h-screen"> */}{" "}
+        <div className=" h-screen justify-center items-center snap-start grid grid-cols-2 ">
           <div className="">
-            <img className="mx-auto py-[19.3rem]" src={work} />
+            <img className="mx-auto" src={work} />
           </div>
-          <div className="bg-custom-black py-[19.3rem]">
-            <div className="w-[70%]  mx-auto bg-custom-black">
-              <h1
-                className="text-[4.5rem] font-bold "
-                style={{
-                  lineHeight: "5.5rem",
-                }}
-              >
-                You Do <br /> What You Love.
-              </h1>
-              <p className="text-2xl my-8">
-                Follow your true passion and create something that makes you
-                feel good. We make it easy for you to find & follow your
-                passion.
-              </p>
+          <div className="bg-custom-black h-full flex">
+            <div className="w-[70%]  mx-auto bg-custom-black items-center flex">
+              <div className="">
+                <h1
+                  className="text-[4.5rem] font-bold "
+                  style={{
+                    lineHeight: "5.5rem",
+                  }}
+                >
+                  You Do <br /> What You Love.
+                </h1>
+                <p className="text-2xl my-8">
+                  Follow your true passion and create something that makes you
+                  feel good. We make it easy for you to find & follow your
+                  passion.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="grid grid-cols-2 ">
+        <div className=" h-screen justify-center items-center snap-start grid grid-cols-2 ">
           <div className="">
-            <img className="mx-auto py-[22rem]" src={track} />
+            <img className="mx-auto" src={track} />
           </div>
-          <div className="bg-custom-black py-[19.3rem]">
-            <div className="w-[70%]  mx-auto bg-custom-black">
+          <div className="bg-custom-black h-full flex">
+            <div className="w-[70%]  m-auto bg-custom-black">
               <h1
                 className="text-[4.5rem] font-bold "
                 style={{
@@ -123,13 +124,12 @@ const Landing = () => {
             </div>
           </div>
         </div>
-
-        <div className="grid grid-cols-2 ">
+        <div className="h-screen justify-center items-center snap-start grid grid-cols-2 ">
           <div className="">
-            <img className="mx-auto py-[16.4rem]" src={proofOfWork} />
+            <img className="mx-auto " src={proofOfWork} />
           </div>
-          <div className="bg-custom-black py-[19.3rem]">
-            <div className="w-[70%]  mx-auto bg-custom-black">
+          <div className="bg-custom-black flex h-full">
+            <div className="w-[70%]  m-auto bg-custom-black">
               <h1
                 className="text-[4.5rem] font-bold "
                 style={{
@@ -147,13 +147,12 @@ const Landing = () => {
             </div>
           </div>
         </div>
-
-        <div className="grid grid-cols-2 ">
+        <div className="h-screen justify-center items-center snap-start grid grid-cols-2 ">
           <div className="">
-            <img className="mx-auto py-[19.6rem]" src={rewards} />
+            <img className="mx-auto" src={rewards} />
           </div>
-          <div className="bg-custom-black py-[19.3rem]">
-            <div className="w-[80%]  mx-auto bg-custom-black">
+          <div className="bg-custom-black flex h-full">
+            <div className="w-[70%]  m-auto bg-custom-black">
               <h1
                 className="text-[4.5rem] font-bold "
                 style={{
@@ -171,71 +170,83 @@ const Landing = () => {
             </div>
           </div>
         </div>
-
-        <div className="grid grid-cols-2 py-[19.3rem]">
-          <div className="w-[70%] mx-auto mt-16">
-            <h1
-              className="text-[4.5rem] font-bold"
+        {/* </section> */}
+        <section className="flex h-screen justify-center items-center snap-start">
+          <div className="grid grid-cols-2">
+            <div className="w-[70%] mx-auto mt-16">
+              <h1
+                className="text-[4.5rem] font-bold"
+                style={{
+                  lineHeight: "6rem",
+                }}
+              >
+                Your Data <br /> Your Control.
+              </h1>
+              <p className="text-2xl my-8">
+                Blockchain keep user data privacy atmost with a secure shield
+                attached to your data. You control it, you monetise it & you use
+                it to track your growth.
+              </p>
+            </div>
+            <div>
+              <img className="mx-auto py-[8rem]" src={security} />
+            </div>
+          </div>
+        </section>
+        <section className="flex h-screen justify-center items-center snap-start">
+          <div>
+            {" "}
+            <h1 className="text-center text-[5rem] font-bold">
+              Why it’s <span className="text-custom-yellow "> better </span>
+            </h1>
+            <div className="flex justify-evenly my-24">
+              <div className="m-12 border-black rounded-2xl p-4 text-center w-[20%]">
+                <img className="mx-auto my-4" src={decentralised} />
+                <h1 className="text-3xl font-bold my-4">Decentralised</h1>
+                <p>
+                  You control what you want on the platform & hold the rights to
+                  where we go
+                </p>
+              </div>
+              <div className="m-12 border-black rounded-2xl p-4 text-center w-[20%]">
+                <img className="mx-auto my-4" src={community} />
+                <h1 className="text-3xl font-bold my-4">Community</h1>
+                <p>
+                  Become the 1% of the world & meet similar minds with growth
+                  mindset.
+                </p>
+              </div>
+              <div className="m-12 border-black rounded-2xl p-4 text-center w-[20%]">
+                <img className="mx-auto my-4" src={coin} />
+                <h1 className="text-3xl font-bold my-4">Incentives</h1>
+                <p>
+                  Learning becomes much more fun when you get incentivised for
+                  the same
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="flex h-screen justify-center items-center snap-start">
+          <div>
+            {" "}
+            <h1 className="text-[4.5rem] font-bold text-center ">
+              Build the proof of your productivity.
+            </h1>
+            <button
+              className="bg-custom-yellow mx-auto block mt-12 text-black px-12 py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
               style={{
-                lineHeight: "6rem",
+                borderStyle: "outset",
               }}
             >
-              Your Data <br /> Your Control.
-            </h1>
-            <p className="text-2xl my-8">
-              Blockchain keep user data privacy atmost with a secure shield
-              attached to your data. You control it, you monetise it & you use
-              it to track your growth.
-            </p>
+              Join Waitlist
+            </button>
           </div>
-          <div>
-            <img className="mx-auto py-[8rem]" src={security} />
-          </div>
-        </div>
-
-        <h1 className="text-center text-[5rem] font-bold">
-          Why it’s <span className="text-custom-yellow "> better </span>
-        </h1>
-        <div className="flex justify-evenly my-24">
-          <div className="m-12 border-black rounded-2xl p-4 text-center w-[20%]">
-            <img className="mx-auto my-4" src={decentralised} />
-            <h1 className="text-3xl font-bold my-4">Decentralised</h1>
-            <p>
-              You control what you want on the platform & hold the rights to
-              where we go
-            </p>
-          </div>
-          <div className="m-12 border-black rounded-2xl p-4 text-center w-[20%]">
-            <img className="mx-auto my-4" src={community} />
-            <h1 className="text-3xl font-bold my-4">Community</h1>
-            <p>
-              Become the 1% of the world & meet similar minds with growth
-              mindset.
-            </p>
-          </div>
-          <div className="m-12 border-black rounded-2xl p-4 text-center w-[20%]">
-            <img className="mx-auto my-4" src={coin} />
-            <h1 className="text-3xl font-bold my-4">Incentives</h1>
-            <p>
-              Learning becomes much more fun when you get incentivised for the
-              same
-            </p>
-          </div>
-        </div>
-
-        <h1 className="text-[4.5rem] font-bold text-center mt-[22rem] ">
-          Build the proof of your productivity.
-        </h1>
-        <button
-          className="bg-custom-yellow mx-auto block mt-12 text-black px-12 py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
-          style={{
-            borderStyle: "outset",
-          }}
-        >
-          Join Waitlist
-        </button>
+        </section>
+        <section className="snap-start">
+          <Footer />
+        </section>
       </div>
-      <Footer />
     </>
   );
 };
