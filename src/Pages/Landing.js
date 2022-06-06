@@ -54,7 +54,7 @@ const Landing = () => {
         {/* border-2 border-white */}
         <section class="flex h-screen  items-center snap-start">
           {" "}
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="w-[70%] mx-auto mt-16">
               <h1
                 className="text-[4.5rem] font-bold"
@@ -77,7 +77,7 @@ const Landing = () => {
         </section>
         {/* the group of 4 starts  */}
         {/* <section class=" snap-mandatory h-screen"> */}{" "}
-        <div className=" h-screen justify-center items-center snap-start grid grid-cols-2 ">
+        <div className=" md:h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
           <div className="">
             <img className="mx-auto" src={work} />
           </div>
@@ -101,7 +101,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className=" h-screen justify-center items-center snap-start grid grid-cols-2 ">
+        <div className=" md:h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
           <div className="">
             <img className="mx-auto" src={track} />
           </div>
@@ -124,7 +124,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="h-screen justify-center items-center snap-start grid grid-cols-2 ">
+        <div className="md:h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
           <div className="">
             <img className="mx-auto " src={proofOfWork} />
           </div>
@@ -147,7 +147,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="h-screen justify-center items-center snap-start grid grid-cols-2 ">
+        <div className="md:h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
           <div className="">
             <img className="mx-auto" src={rewards} />
           </div>
@@ -172,7 +172,7 @@ const Landing = () => {
         </div>
         {/* </section> */}
         <section className="flex h-screen justify-center items-center snap-start">
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="w-[70%] mx-auto mt-16">
               <h1
                 className="text-[4.5rem] font-bold"
