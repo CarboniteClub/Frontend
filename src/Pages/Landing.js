@@ -17,7 +17,7 @@ const Landing = () => {
   return (
     <>
       <Header />
-      <div className="snap-y snap-mandatory h-screen overflow-scroll bg-black text-white font-Montserrat w-screen duration-300">
+      <div className="snap-y snap-mandatory h-screen overflow-scroll bg-black text-white font-Montserrat w-screen">
         {/* <div class="relative top-8 -left-4 w-96 h-96 bg-yellow-300 rounded-full blur-xl opacity-30 animate-pulse z-50"></div> */}
         <section className="flex h-screen justify-center items-center snap-start">
           <div className="">
@@ -91,7 +91,7 @@ const Landing = () => {
         </section>
         {/* the group of 4 starts  */}
         {/* <section className=" snap-mandatory h-screen"> */}{" "}
-        <div className=" md:h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
+        <div className=" h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
           <div className="">
             <img className="mx-auto" src={work} />
           </div>
@@ -115,7 +115,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className=" md:h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
+        <div className=" h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
           <div className="">
             <img className="mx-auto" src={track} />
           </div>
@@ -138,7 +138,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="md:h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
+        <div className="h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
           <div className="">
             <img className="mx-auto " src={proofOfWork} />
           </div>
@@ -161,7 +161,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="md:h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
+        <div className="h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
           <div className="">
             <img className="mx-auto" src={rewards} />
           </div>
@@ -207,14 +207,14 @@ const Landing = () => {
             </div>
           </div>
         </section>
-        <section className="flex h-screen justify-center items-center snap-start">
+        <section className="flex min-h-screen justify-center items-center snap-start">
           <div>
             {" "}
-            <h1 className="text-center text-[5rem] font-bold">
+            <h1 className="text-center text-6xl md:text-[5rem] font-bold">
               Why it’s <span className="text-custom-yellow "> better </span>
             </h1>
-            <div className="flex justify-evenly my-24">
-              <div className="m-12 border-black rounded-2xl p-4 text-center w-[20%]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-evenly my-24">
+              <div className="m-12 border-white border-2 rounded-2xl p-4 text-center ">
                 <img className="mx-auto my-4" src={decentralised} />
                 <h1 className="text-3xl font-bold my-4">Decentralised</h1>
                 <p>
@@ -222,7 +222,7 @@ const Landing = () => {
                   where we go
                 </p>
               </div>
-              <div className="m-12 border-black rounded-2xl p-4 text-center w-[20%]">
+              <div className="m-12 border-black rounded-2xl p-4 text-cente ">
                 <img className="mx-auto my-4" src={community} />
                 <h1 className="text-3xl font-bold my-4">Community</h1>
                 <p>
@@ -230,7 +230,7 @@ const Landing = () => {
                   mindset.
                 </p>
               </div>
-              <div className="m-12 border-black rounded-2xl p-4 text-center w-[20%]">
+              <div className="m-12 border-black rounded-2xl p-4 text-center">
                 <img className="mx-auto my-4" src={coin} />
                 <h1 className="text-3xl font-bold my-4">Incentives</h1>
                 <p>
