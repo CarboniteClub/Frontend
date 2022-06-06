@@ -18,36 +18,50 @@ const Landing = () => {
     <>
       <Header />
       <div className="snap-y snap-mandatory h-screen overflow-scroll bg-black text-white font-Montserrat w-screen">
+        {/* <div class="relative top-8 -left-4 w-96 h-96 bg-yellow-300 rounded-full blur-xl opacity-30 animate-pulse z-50"></div> */}
         <section class="flex h-screen justify-center items-center snap-start">
           <div class="">
-            <h1
-              className="text-[5rem] font-bold text-center"
-              style={{
-                lineHeight: "6rem",
-              }}
-            >
+            <div class="relative w-full max-w-lg">
+              <div class="absolute rounded-full animate-ping mix-blend-lighten filter blur-2xl opacity-70 -top-5 -right-2 w-72 h-72 bg-yellow-500" />
+              <div class="absolute rounded-full animate-pulse animation-delay-2000 mix-blend-lighten filter blur-2xl opacity-70 top-0 -left-2 w-72 h-72 bg-indigo-500" />
+              <div class="absolute rounded-full animate-bounce  mix-blend-lighten filter blur-2xl opacity-70 -bottom-20 left-20 w-72 h-72 bg-pink-500" />
+            </div>
+            <h1 className="text-6xl md:text-[5rem] font-bold text-center leading-[4rem] md:leading-[6rem]">
               Be Productive <br /> Earn Rewards.
             </h1>
             <p className="text-2xl text-center my-8">
               Get rewards for being consistent and productive
             </p>
-            <div className="flex justify-center ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center ">
               <button
-                className="bg-custom-yellow text-black px-12 py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
+                className="col-span-1 bg-custom-yellow text-black px-12 py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
                 style={{
                   borderStyle: "outset",
                 }}
               >
                 Join Waitlist
               </button>
-              <button
-                className="flex px-12 py-2 rounded-3xl font-bold shadow-xl "
+              {/* <button
+                className="col-span-1 bg-custom-yellow py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
                 style={{
                   borderStyle: "outset",
                 }}
               >
-                <img src={discord} className="px-2" /> Discord
-              </button>
+                <div className="flex mx-auto w-full">
+                  <img src={discord} className="px-2" /> Discord
+                </div>
+              </button> */}
+              <div className="col-span-1 flex items-center px-auto py-2 rounded-3xl font-bold shadow-xl ">
+                {" "}
+                <button
+                  className="flex self-center w-full"
+                  style={{
+                    borderStyle: "outset",
+                  }}
+                >
+                  <img src={discord} className="px-2" /> Discord
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -81,8 +95,8 @@ const Landing = () => {
           <div className="">
             <img className="mx-auto" src={work} />
           </div>
-          <div className="bg-custom-black h-full flex">
-            <div className="w-[70%]  mx-auto bg-custom-black items-center flex">
+          <div className="md:bg-custom-black h-full flex">
+            <div className="w-[70%]  mx-auto md:bg-custom-black items-center flex">
               <div className="">
                 <h1
                   className="text-[4.5rem] font-bold "
@@ -105,8 +119,8 @@ const Landing = () => {
           <div className="">
             <img className="mx-auto" src={track} />
           </div>
-          <div className="bg-custom-black h-full flex">
-            <div className="w-[70%]  m-auto bg-custom-black">
+          <div className="md:bg-custom-black h-full flex">
+            <div className="w-[70%]  m-auto md:bg-custom-black">
               <h1
                 className="text-[4.5rem] font-bold "
                 style={{
@@ -128,8 +142,8 @@ const Landing = () => {
           <div className="">
             <img className="mx-auto " src={proofOfWork} />
           </div>
-          <div className="bg-custom-black flex h-full">
-            <div className="w-[70%]  m-auto bg-custom-black">
+          <div className="md:bg-custom-black flex h-full">
+            <div className="w-[70%]  m-auto md:bg-custom-black">
               <h1
                 className="text-[4.5rem] font-bold "
                 style={{
@@ -151,8 +165,8 @@ const Landing = () => {
           <div className="">
             <img className="mx-auto" src={rewards} />
           </div>
-          <div className="bg-custom-black flex h-full">
-            <div className="w-[70%]  m-auto bg-custom-black">
+          <div className="md:bg-custom-black flex h-full">
+            <div className="w-[70%]  m-auto md:bg-custom-black">
               <h1
                 className="text-[4.5rem] font-bold "
                 style={{
