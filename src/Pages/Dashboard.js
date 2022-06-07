@@ -261,10 +261,10 @@ const Dashboard = () => {
   return (
     <>
       <div className="grid grid-cols-6 text-white font-Montserrat">
-        <div className="col-span-1 bg-primary-black">
+        <div className="col-span-1 bg-primary-black hidden 2xl:inline">
           <LeftNav />
         </div>
-        <div className="col-span-5 bg-primary-black">
+        <div className="col-span-6 2xl:col-span-5 bg-primary-black">
           <DashboardHeader />
 
           <div className="h-12 bg-primary-black"></div>

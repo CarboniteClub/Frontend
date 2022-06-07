@@ -12,56 +12,97 @@ import community from "../assets/community.svg";
 import coin from "../assets/coin.svg";
 import Footer from "../Footers/Footer";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 // import AOS from "aos";
 // import "../../node_modules/aos/dist/aos.css";
 const Landing2 = () => {
-  // const listSkills = () => {
-  //     let obj = [
-  //       {
-  //         name: "Design",
-  //         xp: 20,
-  //       },
-  //       {
-  //         name: "Crypto",
-  //         xp: 15,
-  //       },
-  //       {
-  //         name: "Blockchain",
-  //         xp: 10,
-  //       },
-  //       {
-  //         name: "Artifical Intelligence",
-  //         xp: 7,
-  //       },
-  //       {
-  //         name: "Marketing ",
-  //         xp: 5,
-  //       },
-  //     ];
+  const navigate = useNavigate();
 
-  //     return obj.map((item) => {
-  //       return (
-  //         <div className="flex justify-between my-4 text-xl">
-  //           <h1 className="text-secondary-white">{item.name}</h1>
-  //           <h1 className="">
-  //             {item.xp} <span className="text-custom-yellow">XP</span>{" "}
-  //           </h1>
-  //         </div>
-  //       );
-  //     });
+  //   const listSkills = (name, xp) => {
+  //     return (
+  //       <div className="flex justify-between my-4 text-xl">
+  //         <h1 className="text-secondary-white">{name}</h1>
+  //         <h1 className="">
+  //           {xp} <span className="text-custom-yellow">XP</span>{" "}
+  //         </h1>
+  //       </div>
+  //     );
   //   };
+
+  const features = (imageSRC, title, description) => {
+    return (
+      <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
+        <img className="mx-auto hidden md:inline" src={imageSRC} alt="work" />
+        {/* merge them later */}
+        <img
+          className="h-48 w-48 self-start -mx-6 md:hidden"
+          src={imageSRC}
+          alt={imageSRC}
+        />
+        <div className="mt-8  md:bg-custom-black md:h-full flex md:w-1/2">
+          {/* i liked w-7/12 ig*/}
+          <div className="md:bg-custom-black items-center flex">
+            <div className="md:mx-12 max-w-sm">
+              <h1
+                dangerouslySetInnerHTML={{ __html: title }}
+                className="text-4xl md:text-4xl font-bold"
+              ></h1>
+
+              <p
+                dangerouslySetInnerHTML={{ __html: description }}
+                className="text-md my-8 text-[#B3B3B3]"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  };
+
+  const features2 = (imageSRC, title, description) => {
+    return (
+      <section className="transition ease-in-out flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
+        <img
+          className="mx-auto max-w-xs md:hidden"
+          src={imageSRC}
+          alt={imageSRC}
+        />
+        {/* <div className=""> */}
+        <div className="mx-auto mt-16 max-w-sm md:w-7/12">
+          <h1
+            dangerouslySetInnerHTML={{ __html: title }}
+            className="block md:inline text-4xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] "
+          ></h1>
+          {/* <h1 className="md:hidden text-3xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] ">
+          You are in control
+        </h1> */}
+          <p
+            dangerouslySetInnerHTML={{ __html: description }}
+            className="text-lg my-8 md:my-4 text-[#B3B3B3]"
+          ></p>
+        </div>
+        <img
+          className="mx-auto hidden md:inline"
+          src={imageSRC}
+          alt={imageSRC}
+        />
+        {/* </div> */}
+      </section>
+    );
+  };
+
   return (
     <>
       <Header />
       <div className="snap-y snap-mandatory h-screen overflow-scroll bg-black text-white font-Montserrat w-screen">
         <section className="flex h-screen justify-center items-center snap-start bg-black">
-          <span>
-            {/* <span className="relative w-full max-w-lg">
+          <div>
+            <span className="relative w-full max-w-lg">
               <div className="absolute rounded-full animate-ping mix-blend-lighten filter blur-2xl opacity-70 -top-5 -right-2 w-72 h-72 bg-yellow-500" />
-              <div className="absolute rounded-full animate-pulse animation-delay-2000 mix-blend-lighten filter blur-2xl opacity-70 top-0 -left-2 w-72 h-72 bg-indigo-500" />
-              <div className="absolute rounded-full animate-bounce  mix-blend-lighten filter blur-2xl opacity-70 -bottom-20 left-20 w-72 h-72 bg-pink-500" />
-            </span> */}
+              {/* <div className="absolute rounded-full animate-pulse animation-delay-2000 mix-blend-lighten filter blur-2xl opacity-70 top-0 -left-2 w-72 h-72 bg-indigo-500" />
+              <div className="absolute rounded-full animate-bounce  mix-blend-lighten filter blur-2xl opacity-70 -bottom-20 left-20 w-72 h-72 bg-pink-500" /> */}
+            </span>
 
             <h1 className="text-4xl md:text-[5rem] lg:md:text-[6rem] font-bold text-center leading-[3rem] md:leading-[6rem]">
               Be Productive <br /> Earn Rewards.
@@ -72,10 +113,10 @@ const Landing2 = () => {
             {/* button style
             change font later 
              */}
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row px-auto justify-center">
               {" "}
               <button
-                className="border-solid border-2 box-border flex flex-row my-4 mx-auto items-center justify-center h-12 py-4 px-10 w-48 gap-2 text-black font-bold"
+                className="border-solid border-2 box-border flex flex-row my-4 mx-3 items-center justify-center h-12 py-4  w-48 gap-2 text-black font-bold"
                 style={{
                   "border-color": "rgba(26, 26, 26, 1)",
                   "box-shadow":
@@ -84,11 +125,14 @@ const Landing2 = () => {
                   background:
                     "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
                 }}
+                onClick={() => {
+                  navigate("/waitlist");
+                }}
               >
                 Join Waitlist
               </button>
               <button
-                className="border-solid border-2 box-border flex flex-row my-4 mx-auto items-center justify-center h-12 py-4 px-10 w-48 gap-2 font-bold"
+                className="border-solid border-2 box-border flex flex-row my-4 mx-3 items-center justify-center h-12 py-4  w-48 gap-2 font-bold"
                 style={{
                   "border-color": "rgba(26, 26, 26, 1)",
                   "box-shadow":
@@ -111,7 +155,7 @@ const Landing2 = () => {
                 Discord
               </button>
             </div>
-          </span>
+          </div>
         </section>
         <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
           <img
@@ -138,61 +182,92 @@ const Landing2 = () => {
           {/* </div> */}
         </section>
         {/* the group of 4 sections */}
-        <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
-          <img className="mx-auto hidden md:inline" src={work} alt="work" />
-          {/* merge them later */}
-          <img
-            className="h-48 w-48 self-start -mx-6 md:hidden"
-            src={work}
-            alt="work"
-          />
-          <div className="mt-8  md:bg-custom-black md:h-full flex md:w-1/2">
-            {/* i liked w-7/12 ig*/}
-            <div className="md:bg-custom-black items-center flex">
-              <div className="md:mx-12 max-w-sm">
-                <h1 className="text-4xl md:text-4xl font-bold  ">
-                  You Do <br /> What You Love.
-                </h1>
+        {features(
+          work,
+          "You Do <br /> What You Love.",
+          "Follow your true passion and create something that makes you feel good. We make it easy for you to find & follow your passion."
+        )}
+        {features(
+          track,
+          "Track <br /> Your Progess.",
+          "The information that you gain every single day, even a minute one can be exponential with time. A simple & efficient way to track things can go a long way"
+        )}
+        {features(
+          proofOfWork,
+          "Build Your <br /> Proof of Work.",
+          "With consistency comes power, power to share & build yout work without any limits. Proof of work demands more of skills you learn in a practical manner."
+        )}
+        {features(
+          rewards,
+          "Rewards, <br /> Rewards, Rewards",
+          "Being productive can be fun if you get rewards to compete & stay consistent. Our platform keeps the users at the centre & rewards you for doing productive things"
+        )}
+        {/* end of the group of 4 sections */}
+        {features2(
+          security,
+          "Your Data <br /> Your Control",
+          "Blockchain keep user data privacy atmost with a secure shield attached to your data. You control it, you monetise it & you use it to track your growth."
+        )}
+        {/* why it is better section */}
+        <section className="flex min-h-screen justify-center items-center snap-start">
+          <div>
+            {" "}
+            <h1 className="text-center text-6xl md:text-[5rem] font-bold">
+              Why it’s <span className="text-custom-yellow "> better </span>
+            </h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-evenly my-24">
+              <div
+                className="m-12 rounded-2xl p-4 text-center max-w-sm"
+                style={{
+                  background: " #050505",
+                  "box-shadow":
+                    " -6px -6px 12px rgba(255, 255, 255, 0.04), 6px 6px 12px rgba(0, 0, 0, 0.16)",
+                  "border-radius": "24px",
+                }}
+              >
+                <img className="mx-auto my-4" src={decentralised} />
+                <h1 className="text-3xl font-bold my-4">Decentralised</h1>
+                <p>
+                  You control what you want on the platform & hold the rights to
+                  where we go
+                </p>
+              </div>
+              <div
+                className="m-12 rounded-2xl p-4 text-center max-w-sm"
+                style={{
+                  background: " #050505",
+                  "box-shadow":
+                    " -6px -6px 12px rgba(255, 255, 255, 0.04), 6px 6px 12px rgba(0, 0, 0, 0.16)",
+                  "border-radius": "24px",
+                }}
+              >
+                <img className="mx-auto my-4" src={community} />
+                <h1 className="text-3xl font-bold my-4">Community</h1>
+                <p>
+                  Become the 1% of the world & meet similar minds with growth
+                  mindset.
+                </p>
+              </div>
 
-                <p className="text-md my-8 text-[#B3B3B3]">
-                  Follow your true passion and create something that makes you
-                  feel good. We make it easy for you to find & follow your
-                  passion.
+              <div
+                className="m-12 border-black rounded-2xl p-4 text-center max-w-sm"
+                style={{
+                  background: " #050505",
+                  "box-shadow":
+                    " -6px -6px 12px rgba(255, 255, 255, 0.04), 6px 6px 12px rgba(0, 0, 0, 0.16)",
+                  "border-radius": "24px",
+                }}
+              >
+                <img className="mx-auto my-4" src={coin} />
+                <h1 className="text-3xl font-bold my-4">Incentives</h1>
+                <p>
+                  Learning becomes much more fun when you get incentivised for
+                  the same
                 </p>
               </div>
             </div>
           </div>
         </section>
-        {/* end of the group of 4 sections */}
-        <section className="transition ease-in-out flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
-          <img
-            className="mx-auto max-w-xs md:hidden"
-            src={security}
-            alt="security"
-          />
-          {/* <div className=""> */}
-          <div className="mx-auto mt-16 max-w-sm md:w-7/12">
-            <h1 className="block md:inline text-4xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] ">
-              Your Data <br /> Your Control
-            </h1>
-            {/* <h1 className="md:hidden text-3xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] ">
-              You are in control
-            </h1> */}
-            <p className="text-lg my-8 md:my-4 text-[#B3B3B3]">
-              Blockchain keep user data privacy atmost with a secure shield
-              attached to your data. You control it, you monetise it & you use
-              it to track your growth.
-            </p>
-          </div>
-          <img
-            className="mx-auto hidden md:inline"
-            src={security}
-            alt="security"
-          />
-          {/* </div> */}
-        </section>
-        {/* why it is better section */}
-        <section></section>
         {/* build the proof */}
         <section className="flex flex-col h-screen  justify-center items-center snap-start bg-black w-full">
           <div className="h-full"></div>
@@ -219,6 +294,9 @@ const Landing2 = () => {
                 "border-radius": "100px",
                 background:
                   "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
+              }}
+              onClick={() => {
+                navigate("/waitlist");
               }}
             >
               Join Waitlist

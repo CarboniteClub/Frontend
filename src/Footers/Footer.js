@@ -4,6 +4,7 @@ import twitter from "../assets/twitter.svg";
 import mail from "../assets/mail.svg";
 import discordsmall from "../assets/discordsmall.svg";
 import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="relative bottom-0 w-screen  flex flex-col md:flex-row justify-between bg-secondary-black text-white font-Montserrat">
@@ -19,10 +20,24 @@ const Footer = () => {
       <div className="m-16">
         <h1 className="text-2xl text-right my-4">Contact Us</h1>
         <div className="flex justify-between">
-          <img className="mx-2" src={instagram} />
-          <img className="mx-2" src={twitter} />
-          <img className="mx-2" src={mail} />
-          <img className="ml-2" src={discordsmall} />
+          <a
+            href="https://www.instagram.com/carboniteclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className="mx-2" src={instagram} alt="instagram" />
+          </a>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            {" "}
+            <img className="mx-2" src={twitter} alt="twitter" />
+          </a>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <img className="mx-2" src={mail} alt="mail" />
+          </a>
+          <a href="" target="_blank" rel="noopener noreferrer">
+            {" "}
+            <img className="ml-2" src={discordsmall} alt="discordsmall" />
+          </a>
         </div>
       </div>
     </div>
