@@ -15,15 +15,15 @@ import axios from "axios";
 
 // import AOS from "aos";
 // import "../../node_modules/aos/dist/aos.css";
-// const Landing2 = () => {
-//   useEffect(() => {
-//     AOS.init({
-//       offset: 200,
-//       duration: 600,
-//       easing: "ease-in-sine",
-//       delay: 100,
-//     });
-//   }, []);
+const Landing2 = () => {
+  //   useEffect(() => {
+  //     AOS.init({
+  //       offset: 200,
+  //       duration: 600,
+  //       easing: "ease-in-sine",
+  //       delay: 100,
+  //     });
+  //   }, []);
 
   return (
     <>
