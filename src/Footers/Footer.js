@@ -6,7 +6,7 @@ import discordsmall from "../assets/discordsmall.svg";
 import logo from "../assets/logo.svg";
 const Footer = () => {
   return (
-    <div className="flex justify-between bg-secondary-black text-white font-Montserrat">
+    <div className="relative bottom-0 w-screen  flex flex-col md:flex-row justify-between bg-secondary-black text-white font-Montserrat">
       <div className="m-16">
         <div className="flex justify-start my-4">
           <img src={logo} className="mx-[10px] " />

@@ -12,8 +12,8 @@ import Tasks from "./Pages/Tasks";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/2" element={<Landing2 />} />
+      <Route path="/" element={<Landing2 />} />
+      <Route path="/2" element={<Landing />} />
       <Route path="/waitlist" element={<Waitlist />} />
       <Route path="/leaderboard" element={<Rewards />} />
       <Route path="/dashboard" element={<Dashboard />} />
