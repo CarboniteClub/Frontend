@@ -3,6 +3,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 import Landing from "./Pages/Landing";
+import Landing2 from "./Pages/Landingv2";
 import Waitlist from "./Pages/Waitlist";
 import Rewards from "./Pages/LeaderBoard";
 import Dashboard from "./Pages/Dashboard";
@@ -12,6 +13,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
+      <Route path="/2" element={<Landing2 />} />
       <Route path="/waitlist" element={<Waitlist />} />
       <Route path="/leaderboard" element={<Rewards />} />
       <Route path="/dashboard" element={<Dashboard />} />
