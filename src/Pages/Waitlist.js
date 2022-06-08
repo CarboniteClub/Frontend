@@ -10,7 +10,7 @@ const Waitlist = () => {
       <Header />
       <div className="grid grid-cols-3 md:grid-cols-5  bg-custom-black text-white font-Montserrat pt-10">
         <div className="col-span-3 mx-[8vw]">
-          <h1 className="text-4xl  md:text-[3rem] 2xl:text-[4rem] font-bold text-center leading-[2.5rem] md:leading-[6rem]">
+          <h1 className="text-4xl  md:text-[3rem] 2xl:text-[4rem] font-bold text-center md:text-left leading-[2.5rem] md:leading-[6rem]">
             <br />
             Join the Waitlist.
           </h1>
