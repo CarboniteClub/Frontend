@@ -180,7 +180,7 @@ const Landing2 = () => {
           <div className="mx-auto mt-16 max-w-sm md:w-7/12">
             <h1 className="text-4xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] ">
               Build Your <br />
-              <span className="text-custom-yellow">Web3 </span> Identity.
+              <span className="text-custom-yellow">Onchain </span> Identity.
             </h1>
             <p className="text-lg my-8 md:my-4 text-[#B3B3B3]">
               Your proof of work on blockchain.
