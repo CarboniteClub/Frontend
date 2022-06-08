@@ -11,8 +11,14 @@ import decentralised from "../assets/decentralised.svg";
 import community from "../assets/community.svg";
 import coin from "../assets/coin.svg";
 import Footer from "../Footers/Footer";
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
+import tether from "../assets/tether.svg";
+import graph from "../assets/graph.svg";
+import privacy from "../assets/privacy.svg";
+import trophy from "../assets/trophy.svg";
 
 // import AOS from "aos";
 // import "../../node_modules/aos/dist/aos.css";
@@ -62,7 +68,7 @@ const Landing2 = () => {
 
   const features2 = (imageSRC, title, description) => {
     return (
-      <section className="transition ease-in-out flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
+      <section className="transition ease-in-out flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6 ">
         <img
           className="mx-auto max-w-xs md:hidden"
           src={imageSRC}
@@ -72,14 +78,14 @@ const Landing2 = () => {
         <div className="mx-auto mt-16 max-w-sm md:w-7/12">
           <h1
             dangerouslySetInnerHTML={{ __html: title }}
-            className="block md:inline text-center text-4xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] "
+            className="block  text-center text-4xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] "
           ></h1>
           {/* <h1 className="md:hidden text-3xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] ">
           You are in control
         </h1> */}
           <p
             dangerouslySetInnerHTML={{ __html: description }}
-            className="text-lg my-8 md:my-4  text-justify text-[#B3B3B3]"
+            className="text-lg my-8 md:my-4  text-center text-[#B3B3B3]"
           ></p>
         </div>
         <img
@@ -95,12 +101,12 @@ const Landing2 = () => {
   return (
     <>
       <Header />
-      <div className="snap-y snap-mandatory h-screen overflow-scroll bg-black text-white font-Montserrat w-screen">
+      <div className="snap-y snap-mandatory h-screen overflow-scroll bg-black text-white font-Montserrat w-screen overflow-x-hidden">
         <section className="flex h-screen justify-center items-center snap-start bg-black">
           <div>
             <span className="relative w-full max-w-lg">
               <div
-                className="absolute rounded-full mix-blend-lighten filter blur-2xl  -top-60 -left-72 w-[40vw] h-[40vw] bg-yellow-500"
+                className="absolute rounded-full mix-blend-normal filter blur-2xl  -top-60 -left-72 w-[40vw] h-[40vw] bg-yellow-500"
                 style={{
                   background:
                     "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
@@ -113,6 +119,26 @@ const Landing2 = () => {
                     "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
                 }}
               />
+              <div className="absolute left-[40vw] top-[30vh] w-48">
+                {" "}
+                <img className=" mx-auto my-4" src={graph} alt="graph" />
+              </div>
+              <div className="absolute left-[40vw] top-[30vh] w-48">
+                {" "}
+                <img className=" mx-auto my-4" src={privacy} alt="graph" />
+              </div>
+              <div className="absolute left-[40vw] top-[30vh] w-48">
+                {" "}
+                <img className=" mx-auto my-4" src={trophy} alt="graph" />
+              </div>
+              <div className="absolute left-[40vw] top-[30vh] w-48">
+                {" "}
+                <img className=" mx-auto my-4" src={tether} alt="graph" />
+              </div>
+
+              {/* the 4 tokens */}
+
+              {/* end of 4 tokens */}
               {/* <div className="absolute rounded-full animate-pulse animation-delay-2000 mix-blend-lighten filter blur-2xl opacity-70 top-0 -left-2 w-72 h-72 bg-indigo-500" />
               <div className="absolute rounded-full animate-bounce  mix-blend-lighten filter blur-2xl opacity-70 -bottom-20 left-20 w-72 h-72 bg-pink-500" /> */}
             </span>
@@ -162,10 +188,10 @@ const Landing2 = () => {
                 >
                   <path
                     d="M23.8767 1.75144C22.1051 0.922493 20.2308 0.333488 18.3034 0C18.0633 0.434035 17.7828 1.01781 17.5894 1.48224C15.5113 1.16977 13.4524 1.16977 11.4125 1.48224C11.2192 1.01792 10.9324 0.434035 10.6901 0C8.76083 0.333642 6.88494 0.924147 5.11243 1.75577C1.58528 7.08586 0.629093 12.2834 1.10713 17.4074C3.44658 19.1544 5.71373 20.2157 7.94269 20.9102C8.49664 20.1484 8.98632 19.3419 9.40667 18.499C8.60638 18.1943 7.83487 17.8188 7.10131 17.377C7.29435 17.2339 7.48285 17.0848 7.66652 16.9299C12.1116 19.009 16.9413 19.009 21.3334 16.9299C21.5179 17.0838 21.7063 17.2329 21.8985 17.377C21.1638 17.82 20.3908 18.1962 19.5889 18.5012C20.0117 19.3475 20.5005 20.1548 21.0529 20.9123C23.284 20.2179 25.5532 19.1566 27.8927 17.4074C28.4537 11.4675 26.9345 6.31752 23.8767 1.75134V1.75144ZM10.0123 14.2563C8.6779 14.2563 7.58358 13.0105 7.58358 11.4935C7.58358 9.97658 8.65458 8.72872 10.0123 8.72872C11.3701 8.72872 12.4643 9.97437 12.441 11.4935C12.4431 13.0105 11.3701 14.2563 10.0123 14.2563ZM18.9875 14.2563C17.6531 14.2563 16.5589 13.0105 16.5589 11.4935C16.5589 9.97658 17.6298 8.72872 18.9875 8.72872C20.3453 8.72872 21.4396 9.97437 21.4162 11.4935C21.4162 13.0105 20.3453 14.2563 18.9875 14.2563Z"
-                    fill="white"
+                    fill="gray"
                   />
                 </svg>
-                Discord
+                <div className="text-[gray]">Discord</div>
               </button>
             </div>
           </div>
@@ -219,16 +245,16 @@ const Landing2 = () => {
         {features2(
           security,
           "Your Data <br /> Your Control",
-          "Blockchain keep user data privacy atmost with a secure shield attached to your data. You control it, you monetise it & you use it to track your growth."
+          "Blockchain keeps users data privacy atmost with a secure shield attached to your data. You control it, you monetise it & you use it to track your growth."
         )}
         {/* why it is better section */}
         <section className="flex min-h-screen justify-center items-center snap-start ">
-          <div>
+          <div className="md:pt-12">
             {" "}
             <h1 className="text-center text-6xl md:text-[5rem] font-bold pt-28 md:pt-0">
               Why it’s <span className="text-custom-yellow "> better </span>
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-evenly my-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-evenly 2xl:my-24">
               <div
                 className="m-12 rounded-2xl p-4 py-12 text-center max-w-sm"
                 style={{
