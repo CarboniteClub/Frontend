@@ -34,10 +34,14 @@ const Footer = () => {
           <a href="" target="_blank" rel="noopener noreferrer">
             <img className="mx-2" src={mail} alt="mail" />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          {/* <a href="" target="_blank" rel="noopener noreferrer">
             {" "}
             <img className="ml-2" src={discordsmall} alt="discordsmall" />
-          </a>
+          </a> */}
+          <Link to="/dashboard">
+            {" "}
+            <img className="ml-2" src={discordsmall} alt="discordsmall" />
+          </Link>
         </div>
       </div>
     </div>

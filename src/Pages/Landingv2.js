@@ -180,7 +180,7 @@ const Landing2 = () => {
           <div className="mx-auto mt-16 max-w-sm md:w-7/12">
             <h1 className="text-4xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] ">
               Build Your <br />
-              <span className="text-custom-yellow">Web3 </span> Resume.
+              <span className="text-custom-yellow">Web3 </span> Identity.
             </h1>
             <p className="text-lg my-8 md:my-4 text-[#B3B3B3]">
               Your proof of work on blockchain.
@@ -230,7 +230,7 @@ const Landing2 = () => {
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-evenly my-24">
               <div
-                className="m-12 rounded-2xl p-4 text-center max-w-sm"
+                className="m-12 rounded-2xl p-4 py-12 text-center max-w-sm"
                 style={{
                   background: " #050505",
                   "box-shadow":
@@ -238,7 +238,7 @@ const Landing2 = () => {
                   "border-radius": "24px",
                 }}
               >
-                <img className="mx-auto my-4" src={decentralised} />
+                <img className="mx-auto " src={decentralised} />
                 <h1 className="text-3xl font-bold my-4">Decentralised</h1>
                 <p>
                   You control what you want on the platform & hold the rights to
@@ -246,7 +246,7 @@ const Landing2 = () => {
                 </p>
               </div>
               <div
-                className="m-12 rounded-2xl p-4 text-center max-w-sm"
+                className="m-12 rounded-2xl p-4 py-12 text-center max-w-sm hidden md:inline"
                 style={{
                   background: " #050505",
                   "box-shadow":
@@ -254,16 +254,15 @@ const Landing2 = () => {
                   "border-radius": "24px",
                 }}
               >
-                <img className="mx-auto my-4" src={community} />
+                <img className="mx-auto " src={community} />
                 <h1 className="text-3xl font-bold my-4">Community</h1>
                 <p>
                   Become the 1% of the world & meet similar minds with growth
                   mindset.
                 </p>
               </div>
-
               <div
-                className="m-12 border-black rounded-2xl p-4 text-center max-w-sm"
+                className="m-12 border-black rounded-2xl p-4 py-12 text-center max-w-sm hidden md:inline"
                 style={{
                   background: " #050505",
                   "box-shadow":
@@ -271,7 +270,7 @@ const Landing2 = () => {
                   "border-radius": "24px",
                 }}
               >
-                <img className="mx-auto my-4" src={coin} />
+                <img className="mx-auto " src={coin} />
                 <h1 className="text-3xl font-bold my-4">Incentives</h1>
                 <p>
                   Learning becomes much more fun when you get incentivised for
@@ -280,7 +279,43 @@ const Landing2 = () => {
               </div>
             </div>
           </div>
-          <div className="pb-56 md:pb-0 "></div>
+        </section>
+        <section className="flex min-h-screen justify-center items-center snap-start md:hidden">
+          <div>
+            {" "}
+            <div
+              className="m-12 rounded-2xl p-4 py-12 text-center max-w-sm"
+              style={{
+                background: " #050505",
+                "box-shadow":
+                  " -6px -6px 12px rgba(255, 255, 255, 0.04), 6px 6px 12px rgba(0, 0, 0, 0.16)",
+                "border-radius": "24px",
+              }}
+            >
+              <img className="mx-auto " src={community} />
+              <h1 className="text-3xl font-bold my-4">Community</h1>
+              <p>
+                Become the 1% of the world & meet similar minds with growth
+                mindset.
+              </p>
+            </div>
+            <div
+              className="m-12 border-black rounded-2xl p-4 py-12 text-center max-w-sm"
+              style={{
+                background: " #050505",
+                "box-shadow":
+                  " -6px -6px 12px rgba(255, 255, 255, 0.04), 6px 6px 12px rgba(0, 0, 0, 0.16)",
+                "border-radius": "24px",
+              }}
+            >
+              <img className="mx-auto " src={coin} />
+              <h1 className="text-3xl font-bold my-4">Incentives</h1>
+              <p>
+                Learning becomes much more fun when you get incentivised for the
+                same
+              </p>
+            </div>
+          </div>
         </section>
         {/* build the proof */}
         <section className="flex flex-col h-screen  justify-center items-center snap-start bg-black w-full">
