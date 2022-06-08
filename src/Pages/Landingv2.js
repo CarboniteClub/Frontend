@@ -72,14 +72,14 @@ const Landing2 = () => {
         <div className="mx-auto mt-16 max-w-sm md:w-7/12">
           <h1
             dangerouslySetInnerHTML={{ __html: title }}
-            className="block md:inline text-4xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] "
+            className="block md:inline text-center text-4xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] "
           ></h1>
           {/* <h1 className="md:hidden text-3xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] ">
           You are in control
         </h1> */}
           <p
             dangerouslySetInnerHTML={{ __html: description }}
-            className="text-lg my-8 md:my-4 text-[#B3B3B3]"
+            className="text-lg my-8 md:my-4  text-justify text-[#B3B3B3]"
           ></p>
         </div>
         <img
