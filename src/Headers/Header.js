@@ -24,9 +24,9 @@ const Header = () => {
       </span>
       <div className="w-full mr-4">
         <ul className=" flex flex-row float-right">
-          <li className=" text-md whitespace-nowrap md:px-16 py-2 font-bold  text-white items-center">
+          {/* <li className=" text-md whitespace-nowrap md:px-16 py-2 font-bold  text-white items-center">
             <Link to="/dashboard">Dashboard</Link>
-          </li>
+          </li> */}
           <li className="hidden md:inline">
             {" "}
             <button

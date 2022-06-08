@@ -7,6 +7,7 @@ import Landing2 from "./Pages/Landingv2";
 import Waitlist from "./Pages/Waitlist";
 import Rewards from "./Pages/LeaderBoard";
 import Dashboard from "./Pages/Dashboard";
+import Dashboard2 from "./Pages/Dashboardv2";
 import Tasks from "./Pages/Tasks";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/waitlist" element={<Waitlist />} />
       <Route path="/leaderboard" element={<Rewards />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/dashboard2" element={<Dashboard2 />} />
       <Route path="/tasks" element={<Tasks />} />
     </Routes>
   );

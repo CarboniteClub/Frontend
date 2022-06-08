@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="relative bottom-0 w-screen  flex flex-col md:flex-row justify-between bg-secondary-black text-white font-Montserrat">
-      <div className="m-16">
+      <div className="m-6 md:m-16">
         <div className="flex justify-start my-4">
           <img src={logo} className="mx-[10px] " />
           <h1 className="text-2xl font-bold">Carbonite</h1>
@@ -17,9 +17,9 @@ const Footer = () => {
           Copyright © 2021-22 Carbonite
         </h2>
       </div>
-      <div className="m-16">
-        <h1 className="text-2xl text-right my-4">Contact Us</h1>
-        <div className="flex justify-between">
+      <div className="m-6 mt-0 md:m-16 ">
+        <h1 className="text-2xl text-left md:text-right my-4">Contact Us</h1>
+        <div className="flex md:justify-between">
           <a
             href="https://www.instagram.com/carboniteclub/"
             target="_blank"

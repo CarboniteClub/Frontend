@@ -99,7 +99,20 @@ const Landing2 = () => {
         <section className="flex h-screen justify-center items-center snap-start bg-black">
           <div>
             <span className="relative w-full max-w-lg">
-              <div className="absolute rounded-full animate-ping mix-blend-lighten filter blur-2xl opacity-70 -top-5 -right-2 w-72 h-72 bg-yellow-500" />
+              <div
+                className="absolute rounded-full mix-blend-lighten filter blur-2xl  -top-60 -left-72 w-[40vw] h-[40vw] bg-yellow-500"
+                style={{
+                  background:
+                    "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
+                }}
+              />
+              <div
+                className="absolute rounded-full mix-blend-lighten filter blur-2xl  top-60 left-72 w-[40vw] h-[40vw] bg-yellow-500"
+                style={{
+                  background:
+                    "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
+                }}
+              />
               {/* <div className="absolute rounded-full animate-pulse animation-delay-2000 mix-blend-lighten filter blur-2xl opacity-70 top-0 -left-2 w-72 h-72 bg-indigo-500" />
               <div className="absolute rounded-full animate-bounce  mix-blend-lighten filter blur-2xl opacity-70 -bottom-20 left-20 w-72 h-72 bg-pink-500" /> */}
             </span>
@@ -116,7 +129,7 @@ const Landing2 = () => {
             <div className="flex flex-col md:flex-row px-auto justify-center">
               {" "}
               <button
-                className="border-solid border-2 box-border flex flex-row my-4 mx-3 items-center justify-center h-12 py-4  w-48 gap-2 text-black font-bold"
+                className="border-solid border-2 box-border flex flex-row my-4 mx-auto md:mx-3 items-center justify-center h-12 py-4  w-48 gap-2 text-black font-bold"
                 style={{
                   "border-color": "rgba(26, 26, 26, 1)",
                   "box-shadow":
@@ -132,7 +145,7 @@ const Landing2 = () => {
                 Join Waitlist
               </button>
               <button
-                className="border-solid border-2 box-border flex flex-row my-4 mx-3 items-center justify-center h-12 py-4  w-48 gap-2 font-bold"
+                className="border-solid border-2 box-border flex flex-row my-4 mx-auto md:mx-3 items-center justify-center h-12 py-4  w-48 gap-2 font-bold"
                 style={{
                   "border-color": "rgba(26, 26, 26, 1)",
                   "box-shadow":
@@ -209,10 +222,10 @@ const Landing2 = () => {
           "Blockchain keep user data privacy atmost with a secure shield attached to your data. You control it, you monetise it & you use it to track your growth."
         )}
         {/* why it is better section */}
-        <section className="flex min-h-screen justify-center items-center snap-start">
+        <section className="flex min-h-screen justify-center items-center snap-start ">
           <div>
             {" "}
-            <h1 className="text-center text-6xl md:text-[5rem] font-bold">
+            <h1 className="text-center text-6xl md:text-[5rem] font-bold pt-28 md:pt-0">
               Why it’s <span className="text-custom-yellow "> better </span>
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-evenly my-24">
@@ -267,6 +280,7 @@ const Landing2 = () => {
               </div>
             </div>
           </div>
+          <div className="pb-56 md:pb-0 "></div>
         </section>
         {/* build the proof */}
         <section className="flex flex-col h-screen  justify-center items-center snap-start bg-black w-full">

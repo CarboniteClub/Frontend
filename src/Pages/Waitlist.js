@@ -2,22 +2,20 @@ import React from "react";
 import Header from "../Headers/Header";
 import laptop from "../assets/laptop.svg";
 import Footer from "../Footers/Footer";
+import { useNavigate } from "react-router-dom";
 const Waitlist = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
-      <div className="grid grid-cols-5 bg-custom-black text-white font-Montserrat">
+      <div className="grid grid-cols-3 md:grid-cols-5  bg-custom-black text-white font-Montserrat pt-10">
         <div className="col-span-3 mx-[8vw]">
-          <h1
-            className="text-[3.5rem] font-bold text-center my-16"
-            style={{
-              lineHeight: "4.5rem",
-            }}
-          >
-            We're Launching Soon
+          <h1 className="text-4xl  md:text-[3rem] 2xl:text-[4rem] font-bold text-center leading-[2.5rem] md:leading-[6rem]">
             <br />
             Join the Waitlist.
           </h1>
+          {/* krishna change laptop 2 phone  */}
+          <img src={laptop} className="my-auto  md:hidden" alt="Laptop" />
           <h1 className="text-3xl font-bold my-4">
             About <span className="text-custom-yellow"> Carbonite </span>
           </h1>
@@ -47,15 +45,23 @@ const Waitlist = () => {
             type="email"
           />
           <button
-            className="bg-custom-yellow block mt-12 mb-16 mx-auto text-black px-12 py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
+            className="border-solid border-2 box-border flex flex-row my-4 mx-auto items-center justify-center h-12 py-4 px-10 w-48 gap-2 text-black font-bold"
             style={{
-              borderStyle: "outset",
+              "border-color": "rgba(26, 26, 26, 1)",
+              "box-shadow":
+                "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
+              "border-radius": "100px",
+              background:
+                "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
+            }}
+            onClick={() => {
+              navigate("/waitlist");
             }}
           >
             Join Waitlist
           </button>
         </div>
-        <div className="flex col-span-2">
+        <div className="md:flex col-span-2 hidden">
           <img src={laptop} className="my-auto" />
         </div>
       </div>
