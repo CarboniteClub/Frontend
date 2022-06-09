@@ -119,7 +119,7 @@ const Landing2 = () => {
                     "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
                 }}
               />
-              <div className="absolute left-[60vw] top-80 w-48">
+              <div className="absolute left-[52vw] top-80 w-48">
                 {" "}
                 <img className=" mx-auto my-4" src={graph} alt="graph" />
               </div>
@@ -127,7 +127,7 @@ const Landing2 = () => {
                 {" "}
                 <img className=" mx-auto my-4" src={privacy} alt="graph" />
               </div>
-              <div className="absolute left-[60vw] -top-20 w-48">
+              <div className="absolute left-[52vw] -top-20 w-48">
                 {" "}
                 <img className=" mx-auto my-4" src={trophy} alt="graph" />
               </div>
