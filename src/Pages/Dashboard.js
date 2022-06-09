@@ -31,7 +31,7 @@ const Dashboard = () => {
         xp: 10,
       },
       {
-        name: "Development",
+        name: "Artifical Intelligence",
         xp: 7,
       },
       {
@@ -261,14 +261,14 @@ const Dashboard = () => {
   return (
     <>
       <div className="grid grid-cols-6 text-white font-Montserrat">
-        <div className="col-span-1 bg-primary-black hidden 2xl:inline">
+        <div className="col-span-1 bg-primary-black">
           <LeftNav />
         </div>
-        <div className="col-span-6 2xl:col-span-5 bg-primary-black">
+        <div className="col-span-5 bg-primary-black">
           <DashboardHeader />
 
           <div className="h-12 bg-primary-black"></div>
-          <div className="grid grid-cols-8 bg-primary-black px-16 gap-8 ">
+          <div className="grid grid-cols-5 bg-primary-black px-16 gap-8 ">
             <div className="col-span-2 bg-custom-black rounded-3xl">
               <img src={nft} className="w-full" />
               <div className=" px-8">
@@ -317,7 +317,7 @@ const Dashboard = () => {
                 </button>
               </div>
             </div>
-            <div className="col-span-5 ">
+            <div className="col-span-3 ">
               <div className="text-xl flex mb-4 mt-4">
                 <img src={greenProgress} className="w-6 h-6" />
                 <h1 className="ml-4">
