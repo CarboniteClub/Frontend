@@ -113,25 +113,25 @@ const Landing2 = () => {
                 }}
               />
               <div
-                className="absolute rounded-full mix-blend-lighten filter blur-2xl  top-60 left-72 w-[40vw] h-[40vw] bg-yellow-500"
+                className="absolute rounded-full mix-blend-lighten filter blur-2xl  top-60 left-[500px] w-[40vw] h-[40vw] bg-yellow-500"
                 style={{
                   background:
                     "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
                 }}
               />
-              <div className="absolute left-[40vw] top-[30vh] w-48">
+              <div className="absolute left-[60vw] top-80 w-48">
                 {" "}
                 <img className=" mx-auto my-4" src={graph} alt="graph" />
               </div>
-              <div className="absolute left-[40vw] top-[30vh] w-48">
+              <div className="absolute right-0 top-80 w-48">
                 {" "}
                 <img className=" mx-auto my-4" src={privacy} alt="graph" />
               </div>
-              <div className="absolute left-[40vw] top-[30vh] w-48">
+              <div className="absolute left-[60vw] -top-20 w-48">
                 {" "}
                 <img className=" mx-auto my-4" src={trophy} alt="graph" />
               </div>
-              <div className="absolute left-[40vw] top-[30vh] w-48">
+              <div className="absolute right-0 -top-20 w-48">
                 {" "}
                 <img className=" mx-auto my-4" src={tether} alt="graph" />
               </div>
