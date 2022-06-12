@@ -10,6 +10,10 @@ module.exports = {
         "secondary-white": "#B3B3B3",
         "red-text": "#EE9B81",
         "green-text": "#4BB543",
+        "blockchain-cat": "#EE9B81",
+        "design-cat": "#B66BD0",
+        "development-cat": "#EED581",
+        "submit-black": "#212426",
       },
       fontFamily: {
         Montserrat: ["Montserrat", "sans-serif"],

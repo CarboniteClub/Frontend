@@ -1,12 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+
 const DashboardHeader = () => {
+  const location = useLocation();
+  const [currentLocation, setCurrentLocation] = useState(location.pathname);
+
+  const pageName = () => {
+    let name = currentLocation.split("/")[1];
+    return name[0].toUpperCase() + name.slice(1);
+  };
+
   return (
     <nav className=" flex items-center justify-between px-6 py-4 bg-black ">
       <span className="font-mulish text-2xl font-bold mx-8 text-white ">
-        <Link to="/#">
+        <Link to={`${currentLocation}`}>
           <div className="flex justify-center">
-            <h1>Dashboard</h1>
+            <h1>{pageName()}</h1>
           </div>
         </Link>
       </span>

@@ -8,7 +8,7 @@ import instagram from "../assets/instagram.svg";
 import twitter from "../assets/twitter.svg";
 import linkedIn from "../assets/linkedIn.svg";
 
-const Rewards = () => {
+const LeaderBoard = () => {
   const listLeaders = () => {
     let obj = [
       {
@@ -90,6 +90,7 @@ const Rewards = () => {
     <>
       <Header />
       <div className="bg-primary-black text-white text-center font-Montserrat">
+        <div className="h-[10vh]"></div>
         <h1 className="text-xl pt-16 ">You’re on the early access waitlist!</h1>
         <h1 className="text-5xl font-bold py-8">Will Smith</h1>
         <button
@@ -105,7 +106,7 @@ const Rewards = () => {
         </h1>
         <div className="flex justify-center my-12">
           <button
-            className="flex px-12 mx-4 py-2 bg-secondary-black rounded-3xl font-bold shadow-xl "
+            className="flex px-12 mx-4 py-4 bg-secondary-black rounded-3xl font-bold shadow-xl "
             style={{
               borderStyle: "outset",
             }}
@@ -113,12 +114,12 @@ const Rewards = () => {
             <img src={leaderboard} className="px-2" /> Leaderboard
           </button>
           <button
-            className="flex px-12 mx-4 py-2 rounded-3xl font-bold shadow-xl shadow-secondary-black"
+            className="flex px-12 mx-4 py-4 rounded-3xl font-bold shadow-xl shadow-secondary-black"
             style={{
               borderStyle: "outset",
             }}
           >
-            <img src={rewardsIcon} className="px-2" /> Rewards
+            <img src={rewardsIcon} className="pr-2" /> Rewards
           </button>
         </div>
         {listLeaders()}
@@ -146,4 +147,4 @@ const Rewards = () => {
   );
 };
 
-export default Rewards;
+export default LeaderBoard;
