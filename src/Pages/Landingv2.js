@@ -154,22 +154,29 @@ const Landing2 = () => {
              */}
             <div className="flex flex-col md:flex-row px-auto justify-center">
               {" "}
-              <button
-                className="border-solid border-2 box-border flex flex-row my-4 mx-auto md:mx-3 items-center justify-center h-12 py-4  w-48 gap-2 text-black font-bold"
-                style={{
-                  "border-color": "rgba(26, 26, 26, 1)",
-                  "box-shadow":
-                    "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
-                  "border-radius": "100px",
-                  background:
-                    "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
-                }}
-                onClick={() => {
-                  navigate("/waitlist");
-                }}
+              <a
+                href="https://forms.gle/hysDMZ5Xy3roaaEW9"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Join Waitlist
-              </button>
+                {" "}
+                <button
+                  className="border-solid border-2 box-border flex flex-row my-4 mx-auto md:mx-3 items-center justify-center h-12 py-4  w-48 gap-2 text-black font-bold"
+                  style={{
+                    "border-color": "rgba(26, 26, 26, 1)",
+                    "box-shadow":
+                      "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
+                    "border-radius": "100px",
+                    background:
+                      "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
+                  }}
+                  // onClick={() => {
+                  //   navigate("/waitlist");
+                  // }}
+                >
+                  Join Waitlist
+                </button>
+              </a>
               <button
                 className="border-solid border-2 box-border flex flex-row my-4 mx-auto md:mx-3 items-center justify-center h-12 py-4  w-48 gap-2 font-bold"
                 style={{
@@ -360,22 +367,29 @@ const Landing2 = () => {
             {/* button style
             change font later 
              */}
-            <button
-              className="border-solid border-2 box-border flex flex-row my-4 mx-auto items-center justify-center h-12 py-4 px-10 w-48 gap-2 text-black font-bold"
-              style={{
-                "border-color": "rgba(26, 26, 26, 1)",
-                "box-shadow":
-                  "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
-                "border-radius": "100px",
-                background:
-                  "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
-              }}
-              onClick={() => {
-                navigate("/waitlist");
-              }}
+            <a
+              href="https://forms.gle/hysDMZ5Xy3roaaEW9"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Join Waitlist
-            </button>
+              {" "}
+              <button
+                className="border-solid border-2 box-border flex flex-row my-4 mx-auto items-center justify-center h-12 py-4 px-10 w-48 gap-2 text-black font-bold"
+                style={{
+                  "border-color": "rgba(26, 26, 26, 1)",
+                  "box-shadow":
+                    "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
+                  "border-radius": "100px",
+                  background:
+                    "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
+                }}
+                onClick={() => {
+                  navigate("/waitlist");
+                }}
+              >
+                Join Waitlist
+              </button>
+            </a>
           </div>
           <div className="h-full"></div>
           <Footer />
