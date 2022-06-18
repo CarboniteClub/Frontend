@@ -71,6 +71,7 @@ const Waitlist = () => {
             type="email"
             onChange={(e) => setEmail(e.target.value)}
           />
+
           <button
             className="border-solid border-2 box-border flex flex-row my-4 mx-auto items-center justify-center h-12 py-4 px-10 w-48 gap-2 text-black font-bold"
             style={{
