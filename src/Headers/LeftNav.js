@@ -14,7 +14,7 @@ const LeftNav = () => {
   return (
     <>
       <span className="font-mulish text-2xl font-bold mx-16 text-white leading-none">
-        <Link to="/#">
+        <Link to="/">
           <div className="flex justify-center">
             <img src={logo} className="mx-[10px]" />
             <h1>Carbonite</h1>
@@ -22,42 +22,55 @@ const LeftNav = () => {
         </Link>
       </span>
       <div className="ml-8 my-16 text-secondary-white">
-        <button
-          className={`flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl w-[90%] my-4 ${
-            currentLocation == "/dashboard"
-              ? "text-white bg-secondary-black"
-              : ""
-          } `}
-          style={{
-            borderStyle: "outset",
-          }}
-        >
-          <img src={dashboard} className="mx-2 my-auto align-sub" />
-          <span className="align-super ml-2 "> Dashboard </span>
-        </button>
-        <button
-          className={`flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl w-[90%] my-4 ${
-            currentLocation == "/tasks" ? "text-white bg-secondary-black" : ""
-          } `}
-          style={{
-            borderStyle: "outset",
-          }}
-        >
-          <img src={tasksDim} className="mx-2 my-auto align-sub text-left" />
-          <span className="align-super "> Tasks </span>
-        </button>
-        <button
-          className="flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl w-[90%] my-4"
-          style={{
-            borderStyle: "outset",
-          }}
-        >
-          <img
-            src={customizeDim}
-            className="mx-2 my-auto align-sub text-left"
-          />
-          <span className="align-super"> Customize </span>
-        </button>
+        <Link to="/dashboard">
+          <button
+            className={`flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl w-[90%] my-4 ${
+              currentLocation == "/dashboard"
+                ? "text-white bg-secondary-black"
+                : ""
+            } `}
+            style={{
+              borderStyle: "outset",
+            }}
+          >
+            <img src={dashboard} className="mx-2 my-auto align-sub" />
+            <span className="align-super ml-2 "> Dashboard </span>
+          </button>
+        </Link>
+
+        <Link to="/tasks">
+          <button
+            className={`flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl w-[90%] my-4 ${
+              currentLocation == "/tasks" ? "text-white bg-secondary-black" : ""
+            } `}
+            style={{
+              borderStyle: "outset",
+            }}
+          >
+            <img src={tasksDim} className="mx-2 my-auto align-sub text-left" />
+            <span className="align-super "> Tasks </span>
+          </button>
+        </Link>
+
+        <Link to="/customize">
+          <button
+            className={`flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl w-[90%] my-4 ${
+              currentLocation == "/customize"
+                ? "text-white bg-secondary-black"
+                : ""
+            } `}
+            style={{
+              borderStyle: "outset",
+            }}
+          >
+            <img
+              src={customizeDim}
+              className="mx-2 my-auto align-sub text-left"
+            />
+            <span className="align-super"> Customize </span>
+          </button>
+        </Link>
+
         <button
           className="flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl w-[90%] my-4"
           style={{
@@ -70,6 +83,7 @@ const LeftNav = () => {
           />
           <span className="align-super"> Community</span>
         </button>
+
         <button
           className="flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl w-[90%] my-4"
           style={{

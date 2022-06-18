@@ -7,6 +7,7 @@ const DashboardHeader = () => {
 
   const pageName = () => {
     let name = currentLocation.split("/")[1];
+    if(name == "customize") name = "Customize NFT"
     return name[0].toUpperCase() + name.slice(1);
   };
 

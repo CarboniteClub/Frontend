@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Headers/Header";
 import laptop from "../assets/laptop.svg";
 import Footer from "../Footers/Footer";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { SERVER } from "../constants";
+
 const Waitlist = () => {
   const navigate = useNavigate();
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNum, setPhoneNum] = useState("");
+
+  const submitHandler = () => {
+    console.log("calling submit");
+    axios
+      .post(`${SERVER}/waitlist`, {
+        name,
+        email,
+        phone: phoneNum,
+      })
+      .then((res) => {
+        console.log("res data", res.data);
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+  };
+
   return (
     <>
       <Header />
@@ -30,6 +54,7 @@ const Waitlist = () => {
             className="bg-secondary-black text-secondary-white w-full p-4 my-4 outline-none"
             placeholder="Will Smith"
             type="text"
+            onChange={(e) => setName(e.target.value)}
           />
           <h1 className="mt-8 font-bold">Phone Number</h1>
           <input
@@ -37,12 +62,14 @@ const Waitlist = () => {
             placeholder="9876543210"
             type="number"
             onWheel={"return false"}
+            onChange={(e) => setPhoneNum(e.target.value)}
           />
           <h1 className="mt-8 font-bold">Email</h1>
           <input
             className="bg-secondary-black text-secondary-white w-full p-4 my-4 outline-none"
             placeholder="name@example.com"
             type="email"
+            onChange={(e) => setEmail(e.target.value)}
           />
           <button
             className="border-solid border-2 box-border flex flex-row my-4 mx-auto items-center justify-center h-12 py-4 px-10 w-48 gap-2 text-black font-bold"
@@ -55,6 +82,7 @@ const Waitlist = () => {
                 "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
             }}
             onClick={() => {
+              submitHandler();
               navigate("/waitlist");
             }}
           >

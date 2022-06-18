@@ -20,21 +20,8 @@ import graph from "../assets/graph.svg";
 import privacy from "../assets/privacy.svg";
 import trophy from "../assets/trophy.svg";
 
-// import AOS from "aos";
-// import "../../node_modules/aos/dist/aos.css";
 const Landing2 = () => {
   const navigate = useNavigate();
-
-  //   const listSkills = (name, xp) => {
-  //     return (
-  //       <div className="flex justify-between my-4 text-xl">
-  //         <h1 className="text-secondary-white">{name}</h1>
-  //         <h1 className="">
-  //           {xp} <span className="text-custom-yellow">XP</span>{" "}
-  //         </h1>
-  //       </div>
-  //     );
-  //   };
 
   const features = (imageSRC, title, description) => {
     return (

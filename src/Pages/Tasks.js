@@ -93,15 +93,15 @@ const Tasks = () => {
 
     return obj.map((item) => {
       return (
-        <div className="my-1">
-          <input
-            type="checkbox"
-            value={item}
-            className="inline-block"
-            width={"40px"}
-            height={"40px"}
-          />
-          <h1 className="inline-block text-xl mx-2">{item}</h1>
+        <div className="my-4">
+          <label>
+            <input
+              type="checkbox"
+              checked
+              className="accent-custom-yellow w-6 h-6 align-middle"
+            />
+          </label>
+          <h1 className="inline-block text-xl mx-4 align-top">{item}</h1>
         </div>
       );
     });
@@ -241,7 +241,7 @@ const Tasks = () => {
           </div>
           <div className="col-span-1 bg-custom-black my-6 rounded-3xl p-8">
             <h1 className="text-2xl my-2">Filter</h1>
-            <h1 className="text-xl text-secondary-white my-2">Skills</h1>
+            <h1 className="text-xl text-secondary-white my-2 mb-4">Skills</h1>
             {listFilters()}
           </div>
         </div>
