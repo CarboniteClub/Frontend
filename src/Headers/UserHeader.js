@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const CompanyHeader = () => {
+const UserHeader = () => {
   const location = useLocation();
   const [currentLocation, setCurrentLocation] = useState(location.pathname);
 
   const pageName = () => {
     let name = currentLocation.split("/")[1];
     console.log("name", name);
-    if (name == "dashboard") name = "Manage Tasks";
-    else if (name == "add-tasks") name = "Add Tasks";
+    if (name == "customize") name = "Customize NFT";
 
     return name[0].toUpperCase() + name.slice(1);
   };
@@ -32,4 +31,4 @@ const CompanyHeader = () => {
   );
 };
 
-export default CompanyHeader;
+export default UserHeader;

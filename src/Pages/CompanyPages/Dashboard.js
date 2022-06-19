@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import UserHeader from "../../Headers/UserHeader";
+import CompanyHeader from "../../Headers/CompanyHeader";
 import LeftNav from "../../Headers/CompanyLeftNav";
 import Footer from "../../Footers/Footer";
 
@@ -228,7 +228,7 @@ const CompanyDashboard = () => {
           <LeftNav />
         </div>
         <div className="col-span-5 bg-primary-black">
-          <UserHeader />
+          <CompanyHeader />
 
           <div className="h-12 bg-primary-black"></div>
           <div className="mx-14">
