@@ -1,1 +1,1 @@
-export const SERVER = "http://localhost:5001";
+export const SERVER = "https://temp-carbonite.herokuapp.com";
