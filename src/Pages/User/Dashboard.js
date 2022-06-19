@@ -1,19 +1,19 @@
 import React from "react";
-import Footer from "../Footers/Footer";
+import Footer from "../../Footers/Footer";
 import { Link } from "react-router-dom";
-import DashboardHeader from "../Headers/DashboardHeader";
-import nft from "../assets/nft.svg";
-import star from "../assets/star.svg";
-import overallgrowth from "../assets/overallgrowth.svg";
-import greenProgress from "../assets/greenProgress.svg";
-import globe from "../assets/globe.svg";
-import youtube from "../assets/youtube.svg";
-import wikipedia from "../assets/wikipedia.svg";
-import udemy from "../assets/udemy.svg";
-import codeforces from "../assets/codeforces.svg";
-import leaderboardYellow from "../assets/leaderboardYellow.svg";
-import time from "../assets/time.svg";
-import LeftNav from "../Headers/LeftNav";
+import UserHeader from "../../Headers/UserHeader";
+import nft from "../../assets/nft.svg";
+import star from "../../assets/star.svg";
+import overallgrowth from "../../assets/overallgrowth.svg";
+import greenProgress from "../../assets/greenProgress.svg";
+import globe from "../../assets/globe.svg";
+import youtube from "../../assets/youtube.svg";
+import wikipedia from "../../assets/wikipedia.svg";
+import udemy from "../../assets/udemy.svg";
+import codeforces from "../../assets/codeforces.svg";
+import leaderboardYellow from "../../assets/leaderboardYellow.svg";
+import time from "../../assets/time.svg";
+import LeftNav from "../../Headers/LeftNavUsers";
 
 const Dashboard = () => {
   const listSkills = () => {
@@ -265,7 +265,7 @@ const Dashboard = () => {
           <LeftNav />
         </div>
         <div className="col-span-5 bg-primary-black">
-          <DashboardHeader />
+          <UserHeader />
 
           <div className="h-12 bg-primary-black"></div>
           <div className="grid grid-cols-5 bg-primary-black px-16 gap-8 ">

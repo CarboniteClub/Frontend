@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Footer from "../Footers/Footer";
+import Footer from "../../Footers/Footer";
 import { Link } from "react-router-dom";
-import DashboardHeader from "../Headers/DashboardHeader";
-import LeftNav from "../Headers/LeftNav";
-import cross from "../assets/cross.svg";
+import UserHeader from "../../Headers/UserHeader";
+import LeftNav from "../../Headers/LeftNavUsers";
+import cross from "../../assets/cross.svg";
 
 const Tasks = () => {
   const [activeTab, setActiveTab] = useState("explore");
@@ -354,7 +354,7 @@ const Tasks = () => {
           <LeftNav />
         </div>
         <div className="col-span-5 bg-primary-black">
-          <DashboardHeader />
+          <UserHeader />
           <div className="flex justify-center my-12">
             <button
               className={`flex px-12 mx-4 py-4 ${

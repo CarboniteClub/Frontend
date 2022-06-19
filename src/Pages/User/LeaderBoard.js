@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "../Headers/Header";
-import Footer from "../Footers/Footer";
-import leaderboard from "../assets/leaderboard.svg";
-import rewardsIcon from "../assets/rewardsIcon.svg";
-import link from "../assets/link.svg";
-import instagram from "../assets/instagram.svg";
-import twitter from "../assets/twitter.svg";
-import linkedIn from "../assets/linkedIn.svg";
+import Header from "../../Headers/Header";
+import Footer from "../../Footers/Footer";
+import leaderboard from "../../assets/leaderboard.svg";
+import rewardsIcon from "../../assets/rewardsIcon.svg";
+import link from "../../assets/link.svg";
+import instagram from "../../assets/instagram.svg";
+import twitter from "../../assets/twitter.svg";
+import linkedIn from "../../assets/linkedIn.svg";
 
 const LeaderBoard = () => {
   const listLeaders = () => {
