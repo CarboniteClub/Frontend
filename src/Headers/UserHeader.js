@@ -6,7 +6,7 @@ const CompanyHeader = () => {
   const [currentLocation, setCurrentLocation] = useState(location.pathname);
 
   const pageName = () => {
-    let name = currentLocation.split("/")[2];
+    let name = currentLocation.split("/")[1];
     console.log("name", name);
     if (name == "dashboard") name = "Manage Tasks";
     else if (name == "add-tasks") name = "Add Tasks";
