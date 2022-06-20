@@ -1,11 +1,11 @@
 import React from "react";
-import Footer from "../Footers/Footer";
+import Footer from "../../Footers/Footer";
 import { Link } from "react-router-dom";
-import DashboardHeader from "../Headers/DashboardHeader";
-import nft from "../assets/nft.svg";
-import star from "../assets/star.svg";
-import LeftNav from "../Headers/LeftNav";
-import locked from "../assets/locked.svg";
+import UserHeader from "../../Headers/UserHeader";
+import nft from "../../assets/nft.svg";
+import star from "../../assets/star.svg";
+import LeftNav from "../../Headers/LeftNavUsers";
+import locked from "../../assets/locked.svg";
 
 const Customize = () => {
   const listSkills = () => {
@@ -76,7 +76,7 @@ const Customize = () => {
           <LeftNav />
         </div>
         <div className="col-span-5 bg-primary-black">
-          <DashboardHeader />
+          <UserHeader />
 
           <div className="h-12 bg-primary-black"></div>
           <div className="grid grid-cols-5 bg-primary-black px-16 gap-8 ">

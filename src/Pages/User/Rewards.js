@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Header from "../Headers/Header";
-import Footer from "../Footers/Footer";
-import leaderboard from "../assets/leaderboard.svg";
-import rewardsIcon from "../assets/rewardsIcon.svg";
-import tetherRewards from "../assets/tetherRewards.svg";
+import Header from "../../Headers/Header";
+import Footer from "../../Footers/Footer";
+import leaderboard from "../../assets/leaderboard.svg";
+import rewardsIcon from "../../assets/rewardsIcon.svg";
+import tetherRewards from "../../assets/tetherRewards.svg";
 
 const Rewards = () => {
   const [RewardList, setRewardList] = useState([

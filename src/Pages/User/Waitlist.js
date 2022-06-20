@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Header from "../Headers/Header";
-import laptop from "../assets/laptop.svg";
-import Footer from "../Footers/Footer";
+import Header from "../../Headers/Header";
+import laptop from "../../assets/laptop.svg";
+import Footer from "../../Footers/Footer";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { SERVER } from "../constants";
+import { SERVER } from "../../constants";
 
 const Waitlist = () => {
   const navigate = useNavigate();

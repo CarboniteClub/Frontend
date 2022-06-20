@@ -84,18 +84,25 @@ const LeftNav = () => {
           <span className="align-super"> Community</span>
         </button>
 
-        <button
-          className="flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl w-[90%] my-4"
-          style={{
-            borderStyle: "outset",
-          }}
-        >
-          <img
-            src={guidelinesDim}
-            className="mx-2 my-auto align-sub text-left"
-          />
-          <span className="align-super"> Guidelines</span>
-        </button>
+        <Link to="/guidelines">
+          <button
+            className={`flex px-8 py-4 rounded-3xl font-bold text-2xl shadow-xl w-[90%] my-4 ${
+              currentLocation == "/guidelines"
+                ? "text-white bg-secondary-black"
+                : ""
+            } `}
+            style={{
+              borderStyle: "outset",
+            }}
+          >
+            {" "}
+            <img
+              src={guidelinesDim}
+              className="mx-2 my-auto align-sub text-left"
+            />
+            <span className="align-super"> Guidelines</span>
+          </button>
+        </Link>
       </div>
       <button
         className="flex px-8 py-4 rounded-3xl font-bold text-xl shadow-xl shadow-secondary-black my-48 mx-auto "
