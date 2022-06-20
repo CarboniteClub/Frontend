@@ -14,7 +14,7 @@ const Waitlist = () => {
   const [phoneNum, setPhoneNum] = useState("");
 
   const submitHandler = () => {
-    console.log("calling submit");
+    console.log("calling submitxx", SERVER);
     axios
       .post(`${SERVER}/waitlist`, {
         name,
@@ -84,7 +84,7 @@ const Waitlist = () => {
             }}
             onClick={() => {
               submitHandler();
-              navigate("/waitlist");
+              // navigate("/waitlist");
             }}
           >
             Join Waitlist

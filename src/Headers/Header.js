@@ -29,29 +29,22 @@ const Header = () => {
           </li> */}
           <li className="hidden md:inline">
             {" "}
-            <a
-              href="https://forms.gle/hysDMZ5Xy3roaaEW9"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              className="border-solid border-2 box-border flex flex-row  mx-auto items-center justify-center h-12 py-4 px-10 w-48 gap-2 text-black font-bold"
+              style={{
+                "border-color": "rgba(26, 26, 26, 1)",
+                "box-shadow":
+                  "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
+                "border-radius": "100px",
+                background:
+                  "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
+              }}
+              onClick={() => {
+                navigate("/waitlist");
+              }}
             >
-              {" "}
-              <button
-                className="border-solid border-2 box-border flex flex-row  mx-auto items-center justify-center h-12 py-4 px-10 w-48 gap-2 text-black font-bold"
-                style={{
-                  "border-color": "rgba(26, 26, 26, 1)",
-                  "box-shadow":
-                    "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
-                  "border-radius": "100px",
-                  background:
-                    "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
-                }}
-                // onClick={() => {
-                //   navigate("/waitlist");
-                // }}
-              >
-                Join Waitlist
-              </button>
-            </a>
+              Join Waitlist
+            </button>
           </li>
         </ul>
       </div>

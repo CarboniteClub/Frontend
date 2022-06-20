@@ -38,23 +38,15 @@ const Landing = () => {
             <p className="text-2xl text-center my-8">
               Get rewards for being consistent and productive
             </p>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center ">
-              <a
-                href="https://forms.gle/hysDMZ5Xy3roaaEW9"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                className="col-span-1 bg-custom-yellow text-black px-12 py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
+                style={{
+                  borderStyle: "outset",
+                }}
               >
-                <button
-                  className="col-span-1 bg-custom-yellow text-black px-12 py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
-                  style={{
-                    borderStyle: "outset",
-                  }}
-                >
-                  Join Waitlist
-                </button>
-              </a>
-
+                Join Waitlist
+              </button>
               {/* <button
                 className="col-span-1 bg-custom-yellow py-2 rounded-3xl font-bold shadow-md shadow-custom-yellow"
                 style={{
