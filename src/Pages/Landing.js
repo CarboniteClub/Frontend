@@ -11,9 +11,15 @@ import decentralised from "../assets/decentralised.svg";
 import community from "../assets/community.svg";
 import coin from "../assets/coin.svg";
 import Footer from "../Footers/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import axios from "axios";
 
 const Landing = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  },4000);
   return (
     <>
       <Header />
@@ -99,9 +105,9 @@ const Landing = () => {
         </section>
         {/* the group of 4 starts  */}
         {/* <section className=" snap-mandatory h-screen"> */}{" "}
-        <div className=" h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 ">
+        <div className=" h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 "  data-aos="fade-right">
           <div className="">
-            <img className="mx-auto" src={work} />
+              <img className="mx-auto"  src={work} />
           </div>
           <div className="md:bg-custom-black h-full flex">
             <div className="w-[70%]  mx-auto md:bg-custom-black items-center flex">
