@@ -38,10 +38,9 @@ const Footer = () => {
             {" "}
             <img className="ml-2" src={discordsmall} alt="discordsmall" />
           </a> */}
-          <Link to="/dashboard">
-            {" "}
-            <img className="ml-2" src={discordsmall} alt="discordsmall" />
-          </Link>
+          {/* <Link to="/dashboard"> */}{" "}
+          <img className="ml-2" src={discordsmall} alt="discordsmall" />
+          {/* </Link> */}
         </div>
       </div>
     </div>
