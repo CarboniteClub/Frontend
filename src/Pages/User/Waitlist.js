@@ -5,6 +5,7 @@ import Footer from "../../Footers/Footer";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { SERVER } from "../../constants";
+import cross from "../../assets/cross.svg";
 
 const Waitlist = () => {
   const navigate = useNavigate();
@@ -12,6 +13,11 @@ const Waitlist = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
+  const [showModal, setShowModal] = useState(true);
+  const [modalData, setModalData] = useState({
+    title: "",
+    message: "",
+  });
 
   const submitHandler = () => {
     console.log("calling submitxx", SERVER);
@@ -23,10 +29,85 @@ const Waitlist = () => {
       })
       .then((res) => {
         console.log("res data", res.data);
+        setModalData({
+          title: "Successfully Registered",
+          message: "Lets Cre",
+        });
+        setShowModal(true);
       })
       .catch((err) => {
         console.log("err", err);
+        setModalData(true);
       });
+  };
+
+  const displayModal = () => {
+    return (
+      <>
+        <div className="justify-center font-Montserrat items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+          <div className="relative w-[30%] my-6 mx-auto max-w-6xl ">
+            {/*content*/}
+            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-custom-black outline-none focus:outline-none">
+              <div className="mx-6 my-8">
+                <div className="flex justify-between px-4">
+                  <h1 className="text-2xl text-secondary-white">
+                    {/* {modalData.title} */}
+                    Successfully Registered
+                  </h1>
+                  <button
+                    className="text-white inline-block float-right background-transparent  uppercase text-2xl "
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    <img src={cross} />
+                  </button>
+                </div>
+                <div className=" border-b-2 border-[#FFFFFF17] px-6 py-2"></div>
+                <h1 className="mx-4 my-2 text-secondary-white text-xl">
+                  {/* {modalData.message} */}
+                  Checkout Leaderboard and Waitlist for more exciting events !
+                </h1>
+              </div>
+              {/* <div className="grid grid-cols-4 gap-8 p-8">
+                <div className="col-span-3 border-r-2 border-[#FFFFFF17] px-6 py-4">
+                  <h1>{modalData.title}</h1>
+                  <h1>{modalData.message}</h1>
+                </div>
+                <div className="col-span-1">
+                  <button
+                    className="text-white inline-block float-right background-transparent  uppercase text-2xl "
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    <img src={cross} />
+                  </button>
+                  <div className="flex">
+                    <div>
+                      <h1 className="text-custom-yellow text-xl my-2">
+                        Reward
+                      </h1>
+                      <h1 className="text-lg mb-8">1500 NEAR</h1>
+                    </div>
+                  </div>
+
+                  <h1 className="text-custom-yellow text-xl my-2">Format</h1>
+                  <h1 className="text-lg mb-8">{modalData.format}</h1>
+
+                  <h1 className="text-custom-yellow text-xl my-2">Apply</h1>
+                  <p className="text-sm mb-8">
+                    You’ll be notified when your request is accepted
+                  </p>
+                  <button className="bg-primary-black mt-8 text-white px-6 py-4 w-full rounded-3xl shadow-lg shadow-secondary-black">
+                    I’m interested
+                  </button>
+                </div>
+              </div> */}
+            </div>
+          </div>
+        </div>
+        <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+      </>
+    );
   };
 
   return (
@@ -93,6 +174,7 @@ const Waitlist = () => {
         <div className="md:flex col-span-2 hidden">
           <img src={laptop} className="my-auto" />
         </div>
+        {showModal ? displayModal() : null}
       </div>
       <Footer />
     </>
