@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "../Headers/Header";
 import discord from "../assets/discord.svg";
-import blockchain from "../assets/blockchain.svg";
+import phone from "../assets/phone.svg";
 import work from "../assets/work.svg";
 import track from "../assets/track.svg";
 import proofOfWork from "../assets/proofOfWork.svg";
@@ -39,7 +39,11 @@ const Landing2 = () => {
   const features = (imageSRC, title, description) => {
     return (
       <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
-        <img className="mx-auto hidden md:inline" src={imageSRC} alt="work" />
+        <img
+          className="mx-auto hidden md:inline  w-72"
+          src={imageSRC}
+          alt="work"
+        />
         {/* merge them later */}
         <img
           className="h-48 w-48 self-start -mx-6 md:hidden"
@@ -131,7 +135,7 @@ const Landing2 = () => {
                 {" "}
                 <img className=" mx-auto my-4" src={trophy} alt="graph" />
               </div>
-              <div className="absolute right-0 -top-20 w-48">
+              <div className="absolute right-0 -top-20 w-48 w">
                 {" "}
                 <img className=" mx-auto my-4" src={tether} alt="graph" />
               </div>
@@ -142,35 +146,49 @@ const Landing2 = () => {
               {/* <div className="absolute rounded-full animate-pulse animation-delay-2000 mix-blend-lighten filter blur-2xl opacity-70 top-0 -left-2 w-72 h-72 bg-indigo-500" />
               <div className="absolute rounded-full animate-bounce  mix-blend-lighten filter blur-2xl opacity-70 -bottom-20 left-20 w-72 h-72 bg-pink-500" /> */}
             </span>
-
-            <h1 className="text-4xl md:text-[5rem] lg:md:text-[6rem] font-bold text-center leading-[3rem] md:leading-[6rem]">
-              Be Productive <br /> Earn Rewards.
+            {/* text-3xl  md:text-[3rem] 2xl:text-[4rem] font-bold text-center leading-[2.5rem] md:leading-[6rem] */}
+            <h1 className="text-4xl md:text-[4rem] lg:md:text-[5rem] font-bold text-center leading-[3rem] md:leading-[6rem] hidden md:flex ">
+              Build Your Proof of Skills <br /> Earn Rewards.
             </h1>
-            <p className="text-xl text-center my-8 mx-3">
-              Get rewards for being consistent and productive
+            <h1 className="text-4xl md:text-[4rem] lg:md:text-[5rem] font-bold text-center leading-[3rem] md:leading-[6rem] md:hidden ">
+              Build Your <br /> Proof of Skills <br /> Earn Rewards.
+            </h1>
+            <p className="text-2xl text-center my-8 mx-3 hidden md:block">
+              An On-Chain Anonymous Identity Builder
+            </p>
+            <p className="text-2xl text-center my-8 mx-3  md:hidden">
+              An On-Chain Anonymous
+              <br /> Identity Builder
             </p>
             {/* button style
             change font later 
              */}
             <div className="flex flex-col md:flex-row px-auto justify-center">
               {" "}
-              <button
-                className="z-10 border-solid border-2 box-border flex flex-row my-4 mx-auto md:mx-3 items-center justify-center h-12 py-4  w-48 gap-2 text-black font-bold"
-                style={{
-                  "border-color": "rgba(26, 26, 26, 1)",
-                  "box-shadow":
-                    "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
-                  "border-radius": "100px",
-                  background:
-                    "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
-                }}
-                onClick={() => {
-                  navigate("/waitlist");
-                }}
-              >
-                Join Waitlist
-              </button>
               <a
+                href="https://discord.gg/ukT2XGJv"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                <button
+                  className="z-10 border-solid border-2 box-border flex flex-row my-4 mx-auto md:mx-3 items-center justify-center h-12 py-4  w-48 gap-2 text-black font-bold"
+                  style={{
+                    "border-color": "rgba(26, 26, 26, 1)",
+                    "box-shadow":
+                      "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
+                    "border-radius": "100px",
+                    background:
+                      "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
+                  }}
+                  onClick={() => {
+                    // navigate("/waitlist");
+                  }}
+                >
+                  Join Community
+                </button>
+              </a>
+              {/* <a
                 href="https://discord.gg/ukT2XGJv"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -199,16 +217,12 @@ const Landing2 = () => {
                   </svg>
                   <div className="text-[gray]">Discord</div>
                 </button>
-              </a>
+              </a> */}
             </div>
           </div>
         </section>
         <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
-          <img
-            className="mx-auto max-w-xs md:hidden"
-            src={blockchain}
-            alt="blockchain"
-          />
+          <img className="mx-auto max-w-xs md:hidden" src={phone} alt="phone" />
           {/* <div className=""> */}
           <div className="mx-auto mt-16 max-w-sm md:w-7/12">
             <h1 className="text-4xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] ">
@@ -216,37 +230,61 @@ const Landing2 = () => {
               <span className="text-custom-yellow">Onchain </span> Identity.
             </h1>
             <p className="text-lg my-8 md:my-4 text-[#B3B3B3]">
-              Your proof of work on blockchain.
-              <br /> Secure way to show your work to the world & get monetised.
+              Create your On-Chain Anonymous Identity based on your Proof of
+              Tasks and get paid in Crypto.
             </p>
           </div>
-          <img
-            className="mx-auto hidden md:inline"
-            src={blockchain}
-            alt="blockchain"
-          />
+          <img className="mx-auto hidden md:inline" src={phone} alt="phone" />
           {/* </div> */}
         </section>
         {/* the group of 4 sections */}
         {features(
           work,
-          "You Do <br /> What You Love.",
-          "Follow your true passion and create something that makes you feel good. We make it easy for you to find & follow your passion."
+          "Work On Your Skillsets",
+          "Complete tasks in skills that you want to work in and build your identity around it."
         )}
         {features(
           track,
-          "Track <br /> Your Progess.",
-          "The information that you gain every single day, even a minute one can be exponential with time. A simple & efficient way to track things can go a long way"
+          "Track <br /> Your Progess",
+          "Use our Extension to keep a track of your learnings on Internet. We provide analytics so that you know where you are spending most of your time and can work on it."
         )}
-        {features(
+        {/* {features(
           proofOfWork,
-          "Build Your <br /> Proof of Work.",
+          "Build Your <br /> Proof of Tasks",
           "With consistency comes power, power to share & build yout work without any limits. Proof of work demands more of skills you learn in a practical manner."
-        )}
+        )} */}
+        <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
+          <img
+            className="mx-auto hidden md:inline  h-96"
+            src={proofOfWork}
+            alt="proofOfWork"
+          />
+          {/* merge them later */}
+          <img
+            className="h-56 self-start -mx-6 md:hidden"
+            src={proofOfWork}
+            alt="proofOfWork"
+          />
+          <div className="mt-8  md:bg-custom-black md:h-full flex md:w-1/2">
+            {/* i liked w-7/12 ig*/}
+            <div className="md:bg-custom-black items-center flex">
+              <div className="md:mx-12 max-w-sm">
+                <h1 className="text-4xl md:text-4xl font-bold">
+                  Build Your <br /> Proof of Tasks
+                </h1>
+
+                <p className="text-md my-8 text-[#B3B3B3]">
+                  Complete tasks to add them to your Portfolio NFT to showcase
+                  your credibility around the internet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         {features(
-          rewards,
-          "Rewards, <br /> Rewards, Rewards",
-          "Being productive can be fun if you get rewards to compete & stay consistent. Our platform keeps the users at the centre & rewards you for doing productive things"
+          tether,
+          "Work To <br /> Get Paid in  Crypto",
+          "Complete tasks to get rewards in Crypto directly in your wallet instantly with no waiting time."
         )}
         {/* end of the group of 4 sections */}
         {features2(
@@ -367,22 +405,28 @@ const Landing2 = () => {
             {/* button style
             change font later 
              */}
-            <button
-              className="border-solid border-2 box-border flex flex-row my-4 mx-auto items-center justify-center h-12 py-4 px-10 w-48 gap-2 text-black font-bold"
-              style={{
-                "border-color": "rgba(26, 26, 26, 1)",
-                "box-shadow":
-                  "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
-                "border-radius": "100px",
-                background:
-                  "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
-              }}
-              onClick={() => {
-                navigate("/waitlist");
-              }}
+            <a
+              href="https://discord.gg/ukT2XGJv"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Join Waitlist
-            </button>
+              <button
+                className="border-solid border-2 box-border flex flex-row my-4 mx-auto items-center justify-center h-12 py-4  w-48 gap-2 text-black font-bold"
+                style={{
+                  "border-color": "rgba(26, 26, 26, 1)",
+                  "box-shadow":
+                    "-6px -6px 12px rgba(255, 255, 255, 0.21),    6px 6px 12px rgba(0, 0, 0, 0.62)",
+                  "border-radius": "100px",
+                  background:
+                    "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
+                }}
+                onClick={() => {
+                  navigate("/waitlist");
+                }}
+              >
+                Join Community
+              </button>
+            </a>
           </div>
           <div className="h-full"></div>
           <Footer />
