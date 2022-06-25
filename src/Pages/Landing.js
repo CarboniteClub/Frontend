@@ -19,7 +19,7 @@ const Landing = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-  },4000);
+  }, 4000);
   return (
     <>
       <Header />
@@ -87,7 +87,7 @@ const Landing = () => {
               </h1>
               <p className="text-2xl my-8">
                 Your proof of work on blockchain. Secure way to show your work
-                to the world & get monetised.
+                to the world & get monetized.
               </p>
             </div>
             <div>
@@ -97,9 +97,12 @@ const Landing = () => {
         </section>
         {/* the group of 4 starts  */}
         {/* <section className=" snap-mandatory h-screen"> */}{" "}
-        <div className=" h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 "  data-aos="fade-right">
+        <div
+          className=" h-screen justify-center items-center snap-start grid grid-cols-1 md:grid-cols-2 "
+          data-aos="fade-right"
+        >
           <div className="">
-              <img className="mx-auto"  src={work} />
+            <img className="mx-auto" src={work} />
           </div>
           <div className="md:bg-custom-black h-full flex">
             <div className="w-[70%]  mx-auto md:bg-custom-black items-center flex">
@@ -204,7 +207,7 @@ const Landing = () => {
               </h1>
               <p className="text-2xl my-8">
                 Blockchain keep user data privacy atmost with a secure shield
-                attached to your data. You control it, you monetise it & you use
+                attached to your data. You control it, you monetize it & you use
                 it to track your growth.
               </p>
             </div>

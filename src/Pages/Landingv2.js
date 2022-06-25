@@ -290,7 +290,7 @@ const Landing2 = () => {
         {features2(
           security,
           "Your Data <br /> Your Control",
-          "Blockchain keeps users data privacy atmost with a secure shield attached to your data. You control it, you monetise it & you use it to track your growth."
+          "Blockchain keeps users data privacy atmost with a secure shield attached to your data. You control it, you monetize it & you use it to track your growth."
         )}
         {/* why it is better section */}
         <section className="flex min-h-screen justify-center items-center snap-start ">

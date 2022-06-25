@@ -127,7 +127,7 @@ const Waitlist = () => {
           <h1>
             Join the 1% community of builders, where Carbon turns into Diamond &
             build your proof of work on chain. A secure way to show your work to
-            the world & get monetised.{" "}
+            the world & get monetized.{" "}
           </h1>
 
           <h1 className="mt-8 font-bold">Name</h1>
