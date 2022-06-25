@@ -171,7 +171,7 @@ const Landing2 = () => {
                 Join Waitlist
               </button>
               <a
-                href="https://discord.gg/nqSyb5EM/"
+                href="https://discord.gg/ukT2XGJv"
                 target="_blank"
                 rel="noopener noreferrer"
               >
