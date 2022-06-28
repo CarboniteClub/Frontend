@@ -166,7 +166,7 @@ const Landing2 = () => {
             <div className="flex flex-col md:flex-row px-auto justify-center">
               {" "}
               <a
-                href="https://discord.gg/ukT2XGJv"
+                href="https://discord.gg/JAA4Jdu6MV"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -189,7 +189,7 @@ const Landing2 = () => {
                 </button>
               </a>
               {/* <a
-                href="https://discord.gg/ukT2XGJv"
+                href="https://discord.gg/JAA4Jdu6MV"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -406,7 +406,7 @@ const Landing2 = () => {
             change font later 
              */}
             <a
-              href="https://discord.gg/ukT2XGJv"
+              href="https://discord.gg/JAA4Jdu6MV"
               target="_blank"
               rel="noopener noreferrer"
             >
