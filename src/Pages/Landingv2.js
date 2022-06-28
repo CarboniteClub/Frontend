@@ -16,6 +16,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 import tether from "../assets/tether.svg";
+import tether_main from "../assets/tether_main.svg";
+
 import graph from "../assets/graph.svg";
 import privacy from "../assets/privacy.svg";
 import trophy from "../assets/trophy.svg";
@@ -46,7 +48,7 @@ const Landing2 = () => {
         />
         {/* merge them later */}
         <img
-          className="h-48 w-48 self-start -mx-6 md:hidden"
+          className="h-48 w-48 self-start md:mx-12 md:hidden"
           src={imageSRC}
           alt={imageSRC}
         />
@@ -102,6 +104,40 @@ const Landing2 = () => {
     );
   };
 
+  const features3 = (imageSRC, title, description) => {
+    return (
+      <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
+        <img
+          className="mx-auto hidden md:inline md:ml-[-15px]  w-72"
+          src={imageSRC}
+          alt="work"
+        />
+        {/* merge them later */}
+        <img
+          className="h-48 w-48 self-start md:mx-12 md:hidden"
+          src={imageSRC}
+          alt={imageSRC}
+        />
+        <div className="mt-8  md:bg-custom-black md:h-full flex md:w-1/2">
+          {/* i liked w-7/12 ig*/}
+          <div className="md:bg-custom-black items-center flex">
+            <div className="md:mx-12 max-w-sm">
+              <h1
+                dangerouslySetInnerHTML={{ __html: title }}
+                className="text-4xl md:text-4xl font-bold"
+              ></h1>
+
+              <p
+                dangerouslySetInnerHTML={{ __html: description }}
+                className="text-md my-8 text-[#B3B3B3]"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  };
+
   return (
     <>
       <Header />
@@ -124,19 +160,15 @@ const Landing2 = () => {
                 }}
               />
               <div className="absolute left-[52vw] top-80 w-48">
-                {" "}
                 <img className=" mx-auto my-4" src={graph} alt="graph" />
               </div>
               <div className="absolute right-0 top-80 w-48">
-                {" "}
                 <img className=" mx-auto my-4" src={privacy} alt="graph" />
               </div>
               <div className="absolute left-[52vw] -top-20 w-48">
-                {" "}
                 <img className=" mx-auto my-4" src={trophy} alt="graph" />
               </div>
               <div className="absolute right-0 -top-20 w-48 w">
-                {" "}
                 <img className=" mx-auto my-4" src={tether} alt="graph" />
               </div>
 
@@ -243,16 +275,46 @@ const Landing2 = () => {
           "Work On Your Skillsets",
           "Complete tasks in skills that you want to work in and build your identity around it."
         )}
-        {features(
+        {/* {features3(
           track,
           "Track <br /> Your Progess",
           "Use our Extension to keep a track of your learnings on Internet. We provide analytics so that you know where you are spending most of your time and can work on it."
-        )}
+        )} */}
         {/* {features(
           proofOfWork,
           "Build Your <br /> Proof of Tasks",
           "With consistency comes power, power to share & build yout work without any limits. Proof of work demands more of skills you learn in a practical manner."
         )} */}
+        <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
+          <img
+            className="mx-auto hidden md:inline  h-72"
+            src={track}
+            alt="work"
+          />
+          {/* merge them later */}
+          <img
+            className="h-56 self-start md:mx-12 md:hidden"
+            src={track}
+            alt="work"
+          />
+          <div className="mt-8  md:bg-custom-black md:h-full flex md:w-1/2">
+            {/* i liked w-7/12 ig*/}
+            <div className="md:bg-custom-black items-center flex">
+              <div className="md:mx-12 max-w-sm">
+                <h1 className="text-4xl md:text-4xl font-bold">
+                  Track <br />
+                  Your Progess
+                </h1>
+
+                <p className="text-md my-8 text-[#B3B3B3]">
+                  Use our Extension to keep a track of your learnings on
+                  Internet. We provide analytics so that you know where you are
+                  spending most of your time and can work on it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
           <img
             className="mx-auto hidden md:inline  h-96"
@@ -261,7 +323,7 @@ const Landing2 = () => {
           />
           {/* merge them later */}
           <img
-            className="h-56 self-start -mx-6 md:hidden"
+            className="h-56 self-start md:mx-12 md:hidden"
             src={proofOfWork}
             alt="proofOfWork"
           />
@@ -282,8 +344,8 @@ const Landing2 = () => {
           </div>
         </section>
         {features(
-          tether,
-          "Work To <br /> Get Paid in  Crypto",
+          tether_main,
+          "Get Paid in  Crypto",
           "Complete tasks to get rewards in Crypto directly in your wallet instantly with no waiting time."
         )}
         {/* end of the group of 4 sections */}
@@ -419,9 +481,6 @@ const Landing2 = () => {
                   "border-radius": "100px",
                   background:
                     "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
-                }}
-                onClick={() => {
-                  navigate("/waitlist");
                 }}
               >
                 Join Community
