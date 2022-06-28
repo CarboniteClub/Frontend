@@ -482,6 +482,12 @@ const Landing2 = () => {
                   background:
                     "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
                 }}
+<<<<<<< HEAD
+=======
+                onClick={() => {
+                 // navigate("/waitlist");
+                }}
+>>>>>>> c9dc37e46910fb861e6775c6346e87912670bab0
               >
                 Join Community
               </button>
