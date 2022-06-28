@@ -30,7 +30,7 @@ const Header = () => {
           <li className="hidden md:inline items-center">
             {" "}
             <a
-              href="https://discord.gg/ukT2XGJv"
+              href="https://discord.gg/JAA4Jdu6MV"
               target="_blank"
               rel="noopener noreferrer"
             >
