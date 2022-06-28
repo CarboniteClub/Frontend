@@ -13,7 +13,7 @@ const Waitlist = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState({
     title: "",
     message: "",
