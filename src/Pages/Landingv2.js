@@ -421,7 +421,7 @@ const Landing2 = () => {
                     "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
                 }}
                 onClick={() => {
-                  navigate("/waitlist");
+                 // navigate("/waitlist");
                 }}
               >
                 Join Community
