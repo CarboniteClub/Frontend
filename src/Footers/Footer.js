@@ -21,25 +21,37 @@ const Footer = () => {
         <h1 className="text-2xl text-left md:text-right my-4">Contact Us</h1>
         <div className="flex md:justify-between">
           <a
-            href="https://www.instagram.com/carboniteclub/"
+            href="https://www.instagram.com/carbonitedotclub/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img className="mx-2" src={instagram} alt="instagram" />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://twitter.com/carboniteclub?s=21&t=P6BldCUnx6KruOH2vQql_A"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {" "}
             <img className="mx-2" src={twitter} alt="twitter" />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            href="mailto:Clubatcarbonite@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img className="mx-2" src={mail} alt="mail" />
           </a>
-          {/* <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://discord.gg/JAA4Jdu6MV"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {" "}
             <img className="ml-2" src={discordsmall} alt="discordsmall" />
-          </a> */}
+          </a>
           {/* <Link to="/dashboard"> */}{" "}
-          <img className="ml-2" src={discordsmall} alt="discordsmall" />
+          {/* <img className="ml-2" src={discordsmall} alt="discordsmall" /> */}
           {/* </Link> */}
         </div>
       </div>
