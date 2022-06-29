@@ -148,14 +148,14 @@ const Landing2 = () => {
               <div className="w-full sticky ">
                 {/* border-2 border-cyan-100 */}
                 <div
-                  className="absolute rounded-full mix-blend-normal filter blur-2xl  md:-bottom-96 md:-left-72 w-[600px] h-[600px] md:w-[900px] md:h-[900px]  bg-yellow-500"
+                  className="pointer-events-none absolute rounded-full mix-blend-normal filter blur-2xl  md:-bottom-96 md:-left-72 w-[600px] h-[600px] md:w-[900px] md:h-[900px]  bg-yellow-500"
                   style={{
                     background:
                       "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
                   }}
                 />
                 <div
-                  className="absolute  rounded-full mix-blend-normal filter blur-2xl -top-80 md:top-0 -left-64 md:-right-72 w-[600px] h-[600px] md:w-[700px] md:h-[700px]  bg-yellow-500"
+                  className="pointer-events-none absolute  rounded-full mix-blend-normal filter blur-2xl -top-80 md:top-0 -left-64 md:-right-72 w-[600px] h-[600px] md:w-[700px] md:h-[700px]  bg-yellow-500"
                   style={{
                     background:
                       "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
