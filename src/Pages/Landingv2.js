@@ -155,7 +155,7 @@ const Landing2 = () => {
                   }}
                 />
                 <div
-                  className="absolute rounded-full mix-blend-normal filter blur-2xl  top-0 -right-72 w-[300px] h-[300px] md:w-[700px] md:h-[700px]  bg-yellow-500"
+                  className="absolute hidden md:block  rounded-full mix-blend-normal filter blur-2xl  top-0 -right-72 w-[300px] h-[300px] md:w-[700px] md:h-[700px]  bg-yellow-500"
                   style={{
                     background:
                       "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
