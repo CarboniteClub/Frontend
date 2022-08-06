@@ -132,19 +132,25 @@ const Landing2 = () => {
               </div>
             </span>
 
-            <h1 className="text-4xl md:text-[4rem] lg:md:text-[5rem] font-bold text-center leading-[3rem] md:leading-[6rem] hidden md:flex ">
+            {/* <h1 className="text-4xl md:text-[4rem] lg:md:text-[5rem] font-bold text-center leading-[3rem] md:leading-[6rem] hidden md:flex ">
               Build Your Proof of Skills <br /> Earn Rewards.
             </h1>
             <h1 className="text-4xl md:text-[4rem] lg:md:text-[5rem] font-bold text-center leading-[3rem] md:leading-[6rem] md:hidden ">
               Build Your <br /> Proof of Skills <br /> Earn Rewards.
+            </h1> */}
+            <h1 className="text-4xl md:text-[4rem] lg:md:text-[5rem] font-bold text-center leading-[3rem] md:leading-[6rem] hidden md:flex ">
+              Onchain Anonymous Identity Based on <br /> Zero Knowledge Proofs
             </h1>
-            <p className="text-2xl text-center my-8 mx-3 hidden md:block">
+            <h1 className="text-4xl md:text-[4rem] lg:md:text-[5rem] font-bold text-center leading-[3rem] md:leading-[6rem] md:hidden ">
+              Onchain Anonymous Identity Based on <br /> Zero Knowledge Proofs
+            </h1>
+            {/* <p className="text-2xl text-center my-8 mx-3 hidden md:block">
               An On-Chain Anonymous Identity Builder
-            </p>
-            <p className="text-2xl text-center my-8 mx-3  md:hidden">
+            </p> */}
+            {/* <p className="text-2xl text-center my-8 mx-3  md:hidden">
               An On-Chain Anonymous
               <br /> Identity Builder
-            </p>
+            </p> */}
             {/* button style
             change font later 
              */}
@@ -180,12 +186,12 @@ const Landing2 = () => {
           <img className="mx-auto max-w-xs md:hidden" src={phone} alt="phone" />
           <div className="mx-auto mt-16 max-w-sm md:w-7/12">
             <h1 className="text-4xl md:text-4xl font-bold leading-[3rem] md:leading-[3rem] ">
-              Build Your <br />
+              Share Your <br />
               <span className="text-custom-yellow">Onchain </span> Identity.
             </h1>
             <p className="text-lg my-8 md:my-4 text-[#B3B3B3]">
-              Create your On-Chain Anonymous Identity based on your Proof of
-              Tasks and get paid in Crypto.
+              Create your On-Chain Anonymous Identity based on Zero Knowledge
+              Proofs.
             </p>
           </div>
           <img className="mx-auto hidden md:inline" src={phone} alt="phone" />
@@ -193,11 +199,11 @@ const Landing2 = () => {
 
         {features(
           work,
-          "Work On Your Skillsets",
-          "Complete tasks in skills that you want to work in and build your identity around it."
+          "Keep your Data a Secret",
+          "Build your Identity Around one Single Proof"
         )}
 
-        <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
+        {/* <section className="flex flex-col md:flex-row h-screen justify-center items-center snap-start bg-black px-6">
           <img
             className="mx-auto hidden md:inline  h-72"
             src={track}
@@ -232,14 +238,14 @@ const Landing2 = () => {
             src={proofOfWork}
             alt="proofOfWork"
           />
-          {/* merge them later */}
+          
           <img
             className="h-56 self-start md:mx-12 md:hidden"
             src={proofOfWork}
             alt="proofOfWork"
           />
           <div className="mt-8  md:bg-custom-black md:h-full flex md:w-1/2">
-            {/* i liked w-7/12 ig*/}
+            
             <div className="md:bg-custom-black items-center flex">
               <div className="md:mx-12 max-w-sm">
                 <h1 className="text-4xl md:text-4xl font-bold">
@@ -254,16 +260,17 @@ const Landing2 = () => {
             </div>
           </div>
         </section>
+        
         {features(
           tether_main,
           "Get Paid in  Crypto",
           "Complete tasks to get rewards in Crypto directly in your wallet instantly with no waiting time."
-        )}
-
+        )} 
+*/}
         {features2(
           security,
           "Your Data <br /> Your Control",
-          "Blockchain keeps users data privacy atmost with a secure shield attached to your data. You control it, you monetize it & you use it to track your growth."
+          "Blockchain keeps users data privacy atmost with a secure shield attached to your data. You control it."
         )}
 
         <section className="flex min-h-screen justify-center items-center snap-start ">
@@ -367,7 +374,7 @@ const Landing2 = () => {
 
           <div className="w-full">
             <h1 className="text-3xl  md:text-[3rem] 2xl:text-[4rem] font-bold text-center leading-[2.5rem] md:leading-[6rem]">
-              Build the proof of your productivity.
+              We care about your data and privacy.
             </h1>
 
             <a
