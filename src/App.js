@@ -12,6 +12,9 @@ import Customize from "./Pages/User/Customize";
 import Guidelines from "./Pages/User/Guidelines";
 import CompanyDashBoard from "./Pages/CompanyPages/Dashboard";
 import AddTasks from "./Pages/CompanyPages/AddTasks";
+import User from "./Pages/Vault/User";
+import Validator from "./Pages/Vault/Validator";
+import QRScanner from "./Pages/Vault/QRScanner";
 
 function App() {
   return (
@@ -28,6 +31,11 @@ function App() {
 
       <Route path="/company/dashboard" element={<CompanyDashBoard />} />
       <Route path="/company/add-tasks" element={<AddTasks />} />
+
+      {/* Carbonite Vault */}
+      <Route path="/vault/user" element={<User />} />
+      <Route path="/vault/validator" element={<Validator />} />
+      <Route path="/qr-scanner" element={<QRScanner />} />
     </Routes>
   );
 }

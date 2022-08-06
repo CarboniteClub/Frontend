@@ -18,7 +18,7 @@ const Header = () => {
         <Link to="/#">
           <div className="flex justify-center">
             <img src={logo} className="mx-[10px]" />
-            <h1>Carbonite</h1>
+            <h1>Carbonite.Vault</h1>
           </div>
         </Link>
       </span>
