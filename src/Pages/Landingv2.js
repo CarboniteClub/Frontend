@@ -94,34 +94,41 @@ const Landing2 = () => {
     <>
       <Header />
       <div className="snap-y snap-mandatory h-screen overflow-scroll bg-black text-white font-Montserrat w-screen overflow-x-hidden">
-        <section className="flex h-screen justify-center items-center snap-start bg-black">
-          <div>
-            <span className="relative w-full max-w-lg">
-              <div
-                className="absolute rounded-full mix-blend-normal filter blur-2xl  -top-60 -left-72 w-[40vw] h-[40vw] bg-yellow-500"
-                style={{
-                  background:
-                    "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
-                }}
-              />
-              <div
-                className="absolute rounded-full mix-blend-lighten filter blur-2xl  top-60 left-[500px] w-[40vw] h-[40vw] bg-yellow-500"
-                style={{
-                  background:
-                    "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
-                }}
-              />
-              <div className="absolute left-[52vw] top-80 w-48">
-                <img className=" mx-auto my-4" src={graph} alt="graph" />
-              </div>
-              <div className="absolute right-0 top-80 w-48">
-                <img className=" mx-auto my-4" src={privacy} alt="graph" />
-              </div>
-              <div className="absolute left-[52vw] -top-20 w-48">
-                <img className=" mx-auto my-4" src={trophy} alt="graph" />
-              </div>
-              <div className="absolute right-0 -top-20 w-48 w">
-                <img className=" mx-auto my-4" src={tether} alt="graph" />
+        <section className="flex h-screen justify-center items-center snap-start bg-black pt">
+          <div className="pt-20">
+            <span className="sticky">
+              <div className="w-full sticky ">
+                {/* border-2 border-cyan-100 */}
+                <div
+                  className=" opacity-75 pointer-events-none absolute rounded-full mix-blend-normal filter blur-2xl  md:-bottom-96 md:-left-72 w-[600px] h-[600px] md:w-[900px] md:h-[900px]  bg-yellow-500"
+                  style={{
+                    background:
+                      "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
+                  }}
+                />
+                <div
+                  className="opacity-75 pointer-events-none absolute  rounded-full mix-blend-normal filter blur-2xl -top-80 md:top-0 -left-64 md:left-auto md:-right-72 w-[600px] h-[600px] md:w-[700px] md:h-[700px]  "
+                  style={{
+                    background:
+                      "radial-gradient(41.94% 41.94% at 50% 50%, rgba(232, 208, 129, 0.54) 0%, rgba(232, 208, 129, 0) 100%)",
+                  }}
+                />
+                <div className="absolute -left-16 md:-left-32 top-80 w-48">
+                  <img className=" mx-auto my-4" src={graph} alt="graph" />
+                </div>
+                <div className="absolute -right-16 md:-right-32 top-80 w-48">
+                  <img className=" mx-auto my-4" src={privacy} alt="graph" />
+                </div>
+                <div className="absolute -left-16 md:-left-32 -top-20 w-48">
+                  <img className=" mx-auto my-4" src={trophy} alt="graph" />
+                </div>
+                <div className="absolute -right-16 md:-right-32 -top-20 w-48 w">
+                  <img className=" mx-auto my-4" src={tether} alt="graph" />
+                </div>
+                {/* the 4 tokens */}
+                {/* end of 4 tokens */}
+                {/* <div className="absolute rounded-full animate-pulse animation-delay-2000 mix-blend-lighten filter blur-2xl opacity-70 top-0 -left-2 w-72 h-72 bg-indigo-500" />
+              <div className="absolute rounded-full animate-bounce  mix-blend-lighten filter blur-2xl opacity-70 -bottom-20 left-20 w-72 h-72 bg-pink-500" /> */}
               </div>
             </span>
 
