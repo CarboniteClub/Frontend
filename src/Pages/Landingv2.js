@@ -22,6 +22,19 @@ import graph from "../assets/graph.svg";
 import privacy from "../assets/privacy.svg";
 import trophy from "../assets/trophy.svg";
 
+import { Buffer } from "buffer";
+global.Buffer = Buffer;
+const nearAPI = require("near-api-js");
+const { Contract, connect, keyStores, WalletConnection } = nearAPI;
+
+const DEFAULT_GAS = "30000000000000"; // 30 Terra Gas = 30 * 10^12 Gas units
+
+const NO_DEPOSIT = "0";
+
+const RECORD_STORAGE_COST = "1000000000000000000000000"; // 1 Near
+
+const contract_id = "carbonite.testnet";
+
 const Landing2 = () => {
   const navigate = useNavigate();
 
@@ -88,6 +101,36 @@ const Landing2 = () => {
         {/* </div> */}
       </section>
     );
+  };
+
+  const login_handler = async () => {
+    const networkConfig = {
+      networkId: "testnet",
+      keyStore: new keyStores.BrowserLocalStorageKeyStore(),
+      nodeUrl: "https://rpc.testnet.near.org",
+      walletUrl: "https://wallet.testnet.near.org",
+      helperUrl: "https://helper.testnet.near.org",
+      explorerUrl: "https://explorer.testnet.near.org",
+    };
+
+    const near = await connect(networkConfig);
+
+    const wallet = new WalletConnection(near);
+
+    if (!wallet.isSignedIn()) {
+      wallet.requestSignIn({
+        contract_id,
+        methodNames: [
+          "new",
+          "add_m_aadhaar_record",
+          "add_m_driving_license_record",
+        ],
+        successUrl: "http://localhost:3000/vault/user", // optional redirect URL on success
+        // failureUrl: "REPLACE_ME://.com/failure"
+      });
+    } else {
+      navigate("/vault/user");
+    }
   };
 
   return (
@@ -157,9 +200,10 @@ const Landing2 = () => {
             <div className="flex flex-col md:flex-row px-auto justify-center">
               {" "}
               <a
-                href="https://discord.gg/JAA4Jdu6MV"
+                // href="https://discord.gg/JAA4Jdu6MV"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={async () => await login_handler()}
               >
                 {" "}
                 <button
@@ -176,7 +220,7 @@ const Landing2 = () => {
                     // navigate("/waitlist");
                   }}
                 >
-                  Join Community
+                  Sign In
                 </button>
               </a>
             </div>
@@ -393,7 +437,7 @@ const Landing2 = () => {
                     "linear-gradient(179.79deg, #EED581 6.65%, rgba(238, 213, 129, 0.45) 94.29%)",
                 }}
               >
-                Join Community
+                Sign In
               </button>
             </a>
           </div>
