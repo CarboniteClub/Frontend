@@ -20,7 +20,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
-      <Route path="/waitlist" element={<Waitlist />} />
+      {/* <Route path="/waitlist" element={<Waitlist />} />
       <Route path="/leaderboard" element={<LeaderBoard />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/dashboard2" element={<Dashboard2 />} />
@@ -30,7 +30,7 @@ function App() {
       <Route path="/guidelines" element={<Guidelines />} />
 
       <Route path="/company/dashboard" element={<CompanyDashBoard />} />
-      <Route path="/company/add-tasks" element={<AddTasks />} />
+      <Route path="/company/add-tasks" element={<AddTasks />} /> */}
 
       {/* Carbonite Vault */}
       <Route path="/vault/user" element={<User />} />
