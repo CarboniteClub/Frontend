@@ -43,7 +43,7 @@ const Footer = () => {
             <img className="mx-2" src={mail} alt="mail" />
           </a>
           <a
-            // href="https://discord.gg/JAA4Jdu6MV"
+            href="https://discord.gg/JAA4Jdu6MV"
             target="_blank"
             rel="noopener noreferrer"
           >

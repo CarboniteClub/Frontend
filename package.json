@@ -8,12 +8,8 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
-    "buffer": "^6.0.3",
-    "near-api-js": "^0.45.1",
-    "near-cli": "^3.4.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-qr-reader": "^3.0.0-beta-1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
